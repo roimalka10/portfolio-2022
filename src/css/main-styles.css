@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(230, 230, 230);
+}
+::-webkit-scrollbar-track {
+  background-color: #161616;
+}
+
+@media (max-width: 900px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
