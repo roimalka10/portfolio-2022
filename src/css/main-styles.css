@@ -5,10 +5,18 @@
   padding: 0;
   box-sizing: border-box;
   line-height: 1;
+  position: relative;
+  text-decoration: none;
 }
 
 body {
   font-size: 20px;
+  font-family: "Helvetica Now Display", sans-serif;
+}
+
+p {
+  color: #878a8f;
+  font-weight: 500;
 }
 
 ::-webkit-scrollbar {

@@ -6,6 +6,7 @@
   align-items: center;
   background: #0f141e;
   padding: 30px 40px;
+  z-index: 100;
 }
 
 @media (max-width: 767px) {
@@ -16,7 +17,7 @@
 
 .header .logo {
   max-width: 95px;
-  z-index: 150;
+  z-index: 200;
   cursor: pointer;
 }
 
@@ -77,7 +78,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 150;
 }
 
 .header .menu.active {
@@ -104,6 +105,7 @@
   font-family: "Helvetica Now Display";
   font-weight: 800;
   font-size: 360%;
+  position: unset;
 }
 
 @media (max-width: 767px) {

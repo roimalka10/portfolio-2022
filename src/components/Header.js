@@ -16,8 +16,8 @@ const Header = () => {
   return (
     <motion.div
       className="header"
-      initial={{ y: "-100vh" }}
-      animate={{ y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.6, type: "tween" }}
     >
       <Link
