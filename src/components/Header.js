@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import "../css/header.css";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import resume from "../images/roimalka2022.pdf";
+import resume from "../images/roimalkaCV-2.pdf";
+
+import logo from "../images/logo.svg";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -27,10 +28,14 @@ const Header = () => {
         duration={0}
         className="logo"
       >
-        <img src="https://res.cloudinary.com/noname-m-/image/upload/v1622245542/images/namelogo_hpncdo.png" />{" "}
+        <img src={logo} />
       </Link>
-      <div className={showMenu ? "menu active" : "menu"}>
-        <Link
+      <motion.div
+        onClick={handleClick}
+        className={showMenu ? "menu active" : "menu"}
+      >
+        <motion.a
+          whileTap={{ scale: 0.8 }}
           activeClass="active"
           to="home-gallery"
           spy={true}
@@ -39,8 +44,9 @@ const Header = () => {
           onClick={handleClick}
         >
           <span>Home</span>
-        </Link>
-        <Link
+        </motion.a>
+        <motion.a
+          whileTap={{ scale: 0.8 }}
           activeClass="active"
           to="projects"
           spy={true}
@@ -50,21 +56,40 @@ const Header = () => {
           onClick={handleClick}
         >
           <span>Projects</span>
-        </Link>
+        </motion.a>
 
-        <a activeClass="active" className="span-contact" href="#contact">
+        <motion.a
+          whileTap={{ scale: 0.8 }}
+          activeClass="active"
+          className="span-contact"
+          href="#contact"
+        >
           <span>About</span>
-        </a>
-        <a activeClass="active" className="span-resume" href={resume} download>
+        </motion.a>
+        <motion.a
+          whileTap={{ scale: 0.8 }}
+          activeClass="active"
+          className="span-resume"
+          href={resume}
+          download
+        >
           <span>Resume</span>
-        </a>
-        <a href="https://github.com/roimalka10" target="_blank">
+        </motion.a>
+        <motion.a
+          whileTap={{ scale: 0.8 }}
+          href="https://github.com/roimalka10"
+          target="_blank"
+        >
           <span> Github</span>
-        </a>
-        <a href="https://www.linkedin.com/in/roi-malka/" target="_blank">
+        </motion.a>
+        <motion.a
+          whileTap={{ scale: 0.8 }}
+          href="https://www.linkedin.com/in/roi-malka/"
+          target="_blank"
+        >
           <span>LinkedIn</span>
-        </a>
-      </div>
+        </motion.a>
+      </motion.div>
       <div
         onClick={handleClick}
         className={showMenu ? "hamburger open" : "hamburger"}
