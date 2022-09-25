@@ -1,0 +1,51 @@
+.contact-link {
+  background: rgba(15, 20, 30, 0.3);
+  display: block;
+  position: fixed;
+  width: 46px;
+  height: 46px;
+  left: 40px;
+  bottom: 40px;
+  z-index: 20;
+  padding: 13px;
+  border: 0 none;
+  border-radius: 23px;
+  transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1) 0.2s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.contact-link:hover {
+  background: #0f141e;
+  width: 127px;
+  transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+}
+
+.contact-link svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 8px;
+}
+
+.contact-link span {
+  display: block;
+  width: 0;
+  float: left;
+  overflow: hidden;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0;
+  margin-top: 1px;
+  transition: width 0s linear 0.2s, opacity 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+}
+
+.contact-link:hover span {
+  width: auto;
+  opacity: 1;
+  transition: width 0s linear 0.2s,
+    opacity 0.2s cubic-bezier(0.3, 0, 0.5, 1) 0.2s;
+}
