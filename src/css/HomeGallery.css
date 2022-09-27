@@ -49,11 +49,11 @@
 
 .home-gallery .icons li a {
   color: #0f141e;
-  transition: 0.4s all;
+  transition: none;
 }
 
 .home-gallery .icons li a svg {
-  transition: 0.1s all;
+  transition: 0.15s all;
 }
 
 .home-gallery .icons li:hover a {
