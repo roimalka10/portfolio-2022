@@ -1,5 +1,9 @@
 @import url("../fonts/style.css");
 
+.App {
+  transition: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +11,7 @@
   line-height: 1;
   position: relative;
   text-decoration: none;
+  transition: 0.2s all;
 }
 
 body {
@@ -19,14 +24,131 @@ p {
   font-weight: 500;
 }
 
+img {
+  width: 100%;
+}
+
+h1 {
+  margin-top: 15px;
+  font-size: 360%;
+  padding-top: 1px;
+  padding-bottom: 4px;
+  color: #0f141e;
+}
+
+h3 {
+  margin-top: 20px;
+  font-weight: 500;
+  color: #878a8f;
+  font-size: 110%;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  line-height: 30px;
+}
+
+h4 {
+  padding-top: 1px;
+  padding-bottom: 4px;
+  font-size: 90%;
+  line-height: 1.4em;
+}
+
+h5 {
+  font-size: 70%;
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  color: #878a8f;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+nav.links {
+  margin-top: 20px;
+}
+
+nav.links h1,
+nav.links h2,
+nav.links h3,
+nav.links h4,
+nav.links h5,
+nav.links h6 {
+  display: inline-block;
+}
+
+nav.links h4 {
+  cursor: pointer;
+}
+
+nav.links h4::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #0f141e;
+  opacity: 0;
+  transition: 0.4s all;
+}
+
+nav.links h4:hover::after {
+  opacity: 1;
+}
+
+nav.links h4 a {
+  color: #0f141e;
+}
+
+nav.links span {
+  margin: 0 15px;
+  color: #878a8f;
+  font-size: 80%;
+  pointer-events: none;
+}
+
+section {
+  width: 100%;
+}
+
+.wrapper {
+  padding: 0 40px;
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
 ::-webkit-scrollbar {
   width: 13px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgb(230, 230, 230);
+  background: #878a8f;
 }
 ::-webkit-scrollbar-track {
-  background-color: #161616;
+  background-color: #dcdcdc;
+}
+
+@media (max-width: 1400px) {
+  .home-gallery .wrapper .home-row .home-main {
+    width: 58%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .home-gallery .wrapper .home-row .home-main {
+    width: 65%;
+  }
 }
 
 @media (max-width: 900px) {
