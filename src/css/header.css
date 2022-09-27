@@ -4,9 +4,13 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background: #0f141e;
   padding: 30px 40px;
-  z-index: 100;
+  z-index: 1000;
+  position: fixed;
+  height: 0;
+  padding: 0;
+  top: 40px;
+  left: 0px;
 }
 
 @media (max-width: 767px) {
@@ -17,8 +21,10 @@
 
 .header .logo {
   max-width: 95px;
+  margin: 40px 0 0 40px;
   z-index: 200;
   cursor: pointer;
+  background: #0f141e;
 }
 
 .header .logo img {
@@ -28,40 +34,88 @@
   transition-delay: 0.3s;
 }
 
-/* 
-.header:has(.menu.active) .logo img {
-  transition: 0s all;
-} */
-
 /* Header Hamburger */
 .header .hamburger {
   cursor: pointer;
-  display: block;
-  transition: 0.25s all;
+  transition: 0.3s all;
   z-index: 200;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-.header .hamburger .bar {
-  width: 30px;
-  height: 3px;
-  background: #fff;
-  border-radius: 10px;
-  display: block;
-  margin: 8px auto;
+.header > .hamburger {
+  z-index: 130;
+  margin: 40px 40px 0 0;
+}
+
+.header .menu .hamburger {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.header .menu .hamburger > span {
+  color: #878a8f;
+  letter-spacing: 0.2em;
+}
+
+.header .menu .hamburger:hover > span {
+  color: #fff;
+}
+
+.header .hamburger > span {
+  font-size: 70%;
+  font-weight: 800;
+  color: #0f141e;
+  letter-spacing: 0.2em;
   transition: 0.3s all;
 }
 
-.header .hamburger.open .bar:nth-child(2) {
+.header .hamburger:not(.open):hover > span {
+  color: #878a8f;
+  transition: 0.3s all;
+}
+
+.header .hamburger:not(.open):hover .bar {
+  background: #878a8f;
+  margin: 8px auto;
+}
+
+.header .hamburger .bar {
+  width: 28px;
+  height: 3px;
+  background: #0f141e;
+  border-radius: 10px;
+  display: block;
+  margin: 5px auto;
+  transition: 0.3s all;
+}
+
+.header .menu.active .hamburger .bar:nth-child(2) {
   opacity: 0;
 }
-.header .hamburger.open .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+.header .menu.active .hamburger .bar:nth-child(1) {
+  background: #878a8f;
+  transform: translateY(5px) rotate(45deg);
 }
-.header .hamburger.open .bar:nth-child(3) {
-  transform: translateY(-14px) rotate(-45deg);
+.header .menu.active .hamburger .bar:nth-child(3) {
+  background: #878a8f;
+  transform: translateY(-11px) rotate(-45deg);
 }
-.header .hamburger.open:hover {
-  transform: translate(-2px, -3px) rotate(90deg);
+.header .menu.active .hamburger div {
+  transform: translate(0, 0) rotate(0deg);
+  transition: 0.25s all;
+  margin-top: 8px;
+}
+.header .hamburger.open:hover div {
+  transform: translate(-3px, -3px) rotate(90deg);
+  transition: 0.25s all;
+}
+.header .menu.active .hamburger.open:hover .bar {
+  background: #fff;
 }
 
 /* Header Menu */
@@ -119,17 +173,17 @@
   opacity: 1;
 }
 
-.header .menu a:nth-child(1):hover::before,
 .header .menu a:nth-child(2):hover::before,
 .header .menu a:nth-child(3):hover::before,
-.header .menu a:nth-child(4):hover::before {
+.header .menu a:nth-child(4):hover::before,
+.header .menu a:nth-child(5):hover::before {
   opacity: 0.08;
 }
 
-.header .menu a:nth-child(1)::before,
 .header .menu a:nth-child(2)::before,
 .header .menu a:nth-child(3)::before,
-.header .menu a:nth-child(4)::before {
+.header .menu a:nth-child(4)::before,
+.header .menu a:nth-child(5)::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -145,25 +199,25 @@
   background-position: top center;
   filter: blur(2px);
 }
-.header .menu a:nth-child(1)::before {
+.header .menu a:nth-child(2)::before {
   background-image: url("../images/home-image.jpg");
   background-position: 100% 15%;
 }
 
 @media (max-width: 991px) {
-  .header .menu a:nth-child(1)::before {
+  .header .menu a:nth-child(2)::before {
     background-size: 180%;
     background-position: 80% 0%;
   }
 }
 
-.header .menu a:nth-child(2)::before {
+.header .menu a:nth-child(3)::before {
   background-image: url("../images/tesla2.jpg");
 }
-.header .menu a:nth-child(3)::before {
+.header .menu a:nth-child(4)::before {
   background-image: url("../images/portfolio2.jpg");
 }
-.header .menu a:nth-child(4)::before {
+.header .menu a:nth-child(5)::before {
   background-image: url("../images/resume-image.jpg");
   filter: blur(3px);
 }

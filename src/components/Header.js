@@ -34,6 +34,17 @@ const Header = () => {
         onClick={handleClick}
         className={showMenu ? "menu active" : "menu"}
       >
+        <div
+          onClick={handleClick}
+          className={showMenu ? "hamburger open" : "hamburger"}
+        >
+          <span>Close</span>
+          <div>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+        </div>
         <motion.a
           whileTap={{ scale: 0.8 }}
           activeClass="active"
@@ -94,9 +105,12 @@ const Header = () => {
         onClick={handleClick}
         className={showMenu ? "hamburger open" : "hamburger"}
       >
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+        <span>Menu</span>
+        <div>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
       </div>
     </motion.div>
   );
