@@ -1,0 +1,120 @@
+.projects {
+  z-index: 5;
+  padding-top: 140px;
+}
+
+.projects .list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 95px -30px -30px -30px;
+  justify-content: center;
+}
+
+.projects .list .project {
+  margin: 30px;
+  width: calc(50% - 60px);
+}
+
+.projects .list .project > a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(15 20 30 / 95%);
+  z-index: 0;
+  opacity: 1;
+  transition: 0.4s all;
+}
+
+.projects .list .project > a:hover::after {
+  opacity: 0;
+  transition: 1.6s all;
+}
+
+.projects .list .project .project-image {
+  height: 400px;
+}
+
+.projects .list .project-image img {
+  height: 100%;
+}
+
+.project-text {
+  padding-left: 50px;
+  max-width: 420px;
+  position: absolute;
+  color: #fff;
+  top: 50px;
+  z-index: 1;
+}
+
+.project-text h5 {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.project-text h2 {
+  line-height: 40px;
+  font-size: 160%;
+}
+
+.project-text p {
+  color: #fff;
+  line-height: 25px;
+  padding: 5px 0;
+  font-size: 90%;
+  font-weight: 400;
+}
+
+.project-text .stack {
+  font-weight: 800;
+}
+
+.project-text .project-btn {
+  font-size: 80%;
+  text-decoration: none;
+  color: inherit;
+  top: 10px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  opacity: 0.7;
+}
+
+.project-text .project-btn span {
+  text-decoration: underline;
+}
+
+.projects .list .project > a:hover .project-btn {
+  top: 5px;
+  opacity: 0;
+  transition-delay: 0.28s;
+}
+.projects .list .project > a:hover .project-text h5,
+.projects .list .project > a:hover .project-text h2,
+.projects .list .project > a:hover .project-text p {
+  opacity: 0;
+  transform: translateY(-5px);
+  pointer-events: none;
+}
+.projects .list .project > a:hover .project-text h2 {
+  transition-delay: 0.07s;
+}
+.projects .list .project > a:hover .project-text p:not(.stack) {
+  transition-delay: 0.14s;
+}
+.projects .list .project > a:hover .project-text .stack {
+  transition-delay: 0.21s;
+}
+
+@media (max-width: 767px) {
+  .projects .list {
+    margin: 65px 0px -30px 0px;
+  }
+  .projects .list .project {
+    margin: 0px;
+    width: 100%;
+  }
+}
