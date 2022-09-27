@@ -6,9 +6,9 @@
   height: 46px;
   left: 40px;
   bottom: 40px;
-  z-index: 20;
-  padding: 13px;
-  border: 0 none;
+  z-index: 900;
+  border: 2px solid #0f141e;
+  padding: 11px;
   border-radius: 23px;
   transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1) 0.2s;
   -webkit-transform: translate3d(0, 0, 0);

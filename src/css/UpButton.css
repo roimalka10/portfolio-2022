@@ -1,0 +1,18 @@
+button.up-button {
+  background: rgba(15, 20, 30, 0.3);
+  border-radius: 100px;
+  border: 2px solid #0f141e;
+  width: 46px;
+  height: 46px;
+  z-index: 900;
+}
+
+button.up-button svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+button.up-button:hover {
+  background: #0f141e;
+}

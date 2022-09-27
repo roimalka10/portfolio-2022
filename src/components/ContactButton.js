@@ -5,7 +5,16 @@ import { motion } from "framer-motion";
 const ContactButton = () => {
   return (
     <>
-      <a href="#" className="contact-link">
+      <motion.a
+        href="#"
+        className="contact-link"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.3,
+          delay: 1.7,
+        }}
+      >
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +33,7 @@ const ContactButton = () => {
           ></path>
         </svg>
         <span>Contact me</span>
-      </a>
+      </motion.a>
     </>
   );
 };
