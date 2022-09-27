@@ -20,7 +20,7 @@ const HomeGallery = () => {
         >
           <img src={logo} />
         </motion.div>
-        <div className="home-wrapper">
+        <div className="wrapper">
           <div className="home-row">
             <div className="home-main">
               <motion.h5
@@ -41,7 +41,7 @@ const HomeGallery = () => {
                   delay: 1.3,
                 }}
               >
-                Website and user interface developer
+                JavaScript and React Front-End developer
               </motion.h1>
               <motion.h3
                 className="home-text"
@@ -95,9 +95,19 @@ const HomeGallery = () => {
               </motion.nav>
             </div>
           </div>
-          <a href="#" className="scroll-to">
-            <div className="scroll-to-icon"></div>
-          </a>
+          <Link to="projects" spy={true} smooth={true} duration={500}>
+            <motion.a
+              className="scroll-to"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.3,
+                delay: 2.1,
+              }}
+            >
+              <div className="scroll-to-icon"></div>
+            </motion.a>
+          </Link>
         </div>
         <motion.ul
           className="icons"
