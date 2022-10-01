@@ -1,0 +1,30 @@
+.news {
+  padding: 140px 0;
+}
+.news .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.news .wrapper .reload {
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 110%;
+  cursor: pointer;
+}
+
+.news .wrapper .reload::after {
+  position: absolute;
+  content: "";
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--blue);
+  opacity: 0;
+  transition: 0.4s all;
+}
+
+.news .wrapper .reload:hover::after {
+  opacity: 1;
+}

@@ -5,11 +5,16 @@ const NewsItem = ({ title, description, url, urlToImage }) => {
   return (
     <div className="news-app">
       <div className="news-item">
-        <img src={urlToImage} />
+        <img src={urlToImage} alt="image" />
         <h3>
-          <a href={url}>{title}</a>
+          <a target="_blank" href={url}>
+            {title}
+          </a>
         </h3>
-        <p>{description}</p>
+        <p>{description.substring(0, 175)}...</p>
+        <a target="_blank" href={url} className="read-more-btn">
+          Read More
+        </a>
       </div>
     </div>
   );

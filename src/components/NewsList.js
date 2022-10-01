@@ -5,28 +5,40 @@ import "../css/NewsList.css";
 
 const NewsList = () => {
   const [articles, setArticles] = useState([]);
+  const [reload, setReload] = useState(false);
 
   useEffect(() => {
     const getArticles = async () => {
       const response = await axios.get(
-        "https://newsapi.org/v2/everything?q=soccer&apiKey=37a431ef34e244c5bdf27d4419dfb299"
+        "https://newsapi.org/v2/everything?language=en&q=fcbarcelona&apiKey=37a431ef34e244c5bdf27d4419dfb299"
       );
+      // const response = await axios.get(
+      //   "https://newsapi.org/v2/everything?domains=skysports.com&q=barcelona&sortBy=publishedAt&apiKey=37a431ef34e244c5bdf27d4419dfb299"
+      // );
+      console.log(response.data);
       setArticles(response.data.articles);
     };
     getArticles();
-  }, []);
-  console.log(articles);
+  }, [reload]);
+
   return (
-    <div>
-      {articles.map((article) => {
-        <NewsItem
-          title={article.title}
-          description={article.description}
-          url={article.url}
-          urlToImage={article.urlToImage}
-        />;
-      })}
-    </div>
+    <section className="news">
+      <div className="wrapper">
+        {articles.slice(0, 6).map((article) => {
+          return (
+            <NewsItem
+              title={article.title}
+              description={article.description}
+              url={article.url}
+              urlToImage={article.urlToImage}
+            />
+          );
+        })}
+        {/* <a className="reload" onClick={() => setReload(!reload)}>
+          Reload Articles
+        </a> */}
+      </div>
+    </section>
   );
 };
 
