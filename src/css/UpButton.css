@@ -1,7 +1,7 @@
 button.up-button {
   background: rgba(15, 20, 30, 0.3);
   border-radius: 100px;
-  border: 2px solid #0f141e;
+  border: 2px solid var(--blue);
   width: 46px;
   height: 46px;
   z-index: 900;
@@ -14,5 +14,5 @@ button.up-button svg {
 }
 
 button.up-button:hover {
-  background: #0f141e;
+  background: var(--blue);
 }

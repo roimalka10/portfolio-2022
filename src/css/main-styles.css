@@ -1,5 +1,10 @@
 @import url("../fonts/style.css");
 
+:root {
+  --blue: #0f141e;
+  --gray: #878a8f;
+}
+
 .App {
   transition: none;
 }
@@ -20,7 +25,7 @@ body {
 }
 
 p {
-  color: #878a8f;
+  color: var(--gray);
   font-weight: 500;
 }
 
@@ -33,13 +38,13 @@ h1 {
   font-size: 360%;
   padding-top: 1px;
   padding-bottom: 4px;
-  color: #0f141e;
+  color: var(--blue);
 }
 
 h3 {
   margin-top: 20px;
   font-weight: 500;
-  color: #878a8f;
+  color: var(--gray);
   font-size: 110%;
   padding-top: 2px;
   padding-bottom: 3px;
@@ -58,7 +63,7 @@ h5 {
   text-transform: uppercase;
   padding-top: 5px;
   padding-bottom: 8px;
-  color: #878a8f;
+  color: var(--gray);
   font-weight: 400;
   letter-spacing: 5px;
 }
@@ -87,7 +92,7 @@ nav.links h4::after {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #0f141e;
+  background: var(--blue);
   opacity: 0;
   transition: 0.4s all;
 }
@@ -97,12 +102,12 @@ nav.links h4:hover::after {
 }
 
 nav.links h4 a {
-  color: #0f141e;
+  color: var(--blue);
 }
 
 nav.links span {
   margin: 0 15px;
-  color: #878a8f;
+  color: var(--gray);
   font-size: 80%;
   pointer-events: none;
 }
@@ -133,7 +138,7 @@ section {
   width: 13px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #878a8f;
+  background: var(--gray);
 }
 ::-webkit-scrollbar-track {
   background-color: #dcdcdc;

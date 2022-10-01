@@ -24,7 +24,7 @@
   margin: 40px 0 0 40px;
   z-index: 200;
   cursor: pointer;
-  background: #0f141e;
+  background: var(--blue);
 }
 
 .header .logo img {
@@ -58,7 +58,7 @@
 }
 
 .header .menu .hamburger > span {
-  color: #878a8f;
+  color: var(--gray);
   letter-spacing: 0.2em;
 }
 
@@ -69,25 +69,25 @@
 .header .hamburger > span {
   font-size: 70%;
   font-weight: 800;
-  color: #0f141e;
+  color: var(--blue);
   letter-spacing: 0.2em;
   transition: 0.3s all;
 }
 
 .header .hamburger:not(.open):hover > span {
-  color: #878a8f;
+  color: var(--gray);
   transition: 0.3s all;
 }
 
 .header .hamburger:not(.open):hover .bar {
-  background: #878a8f;
+  background: var(--gray);
   margin: 8px auto;
 }
 
 .header .hamburger .bar {
   width: 28px;
   height: 3px;
-  background: #0f141e;
+  background: var(--blue);
   border-radius: 10px;
   display: block;
   margin: 5px auto;
@@ -98,11 +98,11 @@
   opacity: 0;
 }
 .header .menu.active .hamburger .bar:nth-child(1) {
-  background: #878a8f;
+  background: var(--gray);
   transform: translateY(5px) rotate(45deg);
 }
 .header .menu.active .hamburger .bar:nth-child(3) {
-  background: #878a8f;
+  background: var(--gray);
   transform: translateY(-11px) rotate(-45deg);
 }
 .header .menu.active .hamburger div {
@@ -127,7 +127,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #0f141e;
+  background: var(--blue);
   transition: 0.7s all;
   text-align: center;
   justify-content: center;
@@ -152,10 +152,10 @@
 .header .menu a {
   margin: 6px 0;
   text-decoration: none;
-  color: #878a8f;
+  color: var(--gray);
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.4s, color 0.4s;
+  transition: opacity 0.4s, color 0.2s;
   font-family: "Helvetica Now Display";
   font-weight: 800;
   font-size: 360%;
@@ -238,7 +238,7 @@
   bottom: -5px;
   right: 0;
   z-index: 1;
-  background-color: #878a8f;
+  background-color: var(--gray);
   transition: all 0.35s cubic-bezier(0.694, 0.048, 0.335, 1) 0.25s;
 }
 

@@ -7,7 +7,7 @@
   left: 40px;
   bottom: 40px;
   z-index: 900;
-  border: 2px solid #0f141e;
+  border: 2px solid var(--blue);
   padding: 11px;
   border-radius: 23px;
   transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1) 0.2s;
@@ -16,7 +16,7 @@
 }
 
 .contact-link:hover {
-  background: #0f141e;
+  background: var(--blue);
   width: 127px;
   transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
 }

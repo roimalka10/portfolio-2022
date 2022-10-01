@@ -71,9 +71,8 @@ const HomeGallery = () => {
                     to="projects"
                     spy={true}
                     smooth={true}
-                    duration={0}
+                    duration={500}
                     offset={20}
-                    href="#"
                   >
                     View Projects
                   </Link>
