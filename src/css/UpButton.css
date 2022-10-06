@@ -1,5 +1,6 @@
 button.up-button {
-  background: rgba(15, 20, 30, 0.3);
+  /* background: rgba(15, 20, 30, 0.3); */
+  background: var(--blue);
   border-radius: 100px;
   border: 2px solid var(--blue);
   width: 46px;
@@ -10,9 +11,33 @@ button.up-button {
 button.up-button svg {
   width: 20px;
   height: 20px;
+  pointer-events: none;
   fill: #fff;
 }
 
 button.up-button:hover {
   background: var(--blue);
+}
+
+button.up-button:hover svg {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: scrollUp;
+  animation-name: scrollUp;
+}
+
+@keyframes scrollUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
 }

@@ -1,5 +1,6 @@
 .contact-link {
-  background: rgba(15, 20, 30, 0.3);
+  /* background: rgba(15, 20, 30, 0.3); */
+  background: var(--blue);
   display: block;
   position: fixed;
   width: 46px;
@@ -16,7 +17,6 @@
 }
 
 .contact-link:hover {
-  background: var(--blue);
   width: 127px;
   transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
 }
