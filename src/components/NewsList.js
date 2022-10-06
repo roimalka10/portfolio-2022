@@ -13,7 +13,7 @@ const NewsList = () => {
         "https://newsapi.org/v2/everything?language=en&q=fcbarcelona&apiKey=37a431ef34e244c5bdf27d4419dfb299"
       );
       // const response = await axios.get(
-      //   "https://newsapi.org/v2/everything?domains=skysports.com&q=barcelona&sortBy=publishedAt&apiKey=37a431ef34e244c5bdf27d4419dfb299"
+      //   "https://newsapi.org/v2/everything?domains=skysports.com&q=messi&sortBy=publishedAt&apiKey=37a431ef34e244c5bdf27d4419dfb299"
       // );
       console.log(response.data);
       setArticles(response.data.articles);
