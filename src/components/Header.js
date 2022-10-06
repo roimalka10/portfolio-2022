@@ -87,7 +87,9 @@ const Header = () => {
           </Link>
         </motion.a>
         <motion.a activeClass="active" className="span-contact" href="#contact">
-          <span>About</span>
+          <a className="section-link">
+            <span>About</span>
+          </a>
         </motion.a>
         <motion.a
           activeClass="active"
@@ -95,13 +97,19 @@ const Header = () => {
           href={resume}
           download
         >
-          <span>Resume</span>
+          <a className="section-link">
+            <span>Resume</span>
+          </a>
         </motion.a>
         <motion.a href="https://github.com/roimalka10" target="_blank">
-          <span> Github</span>
+          <a className="section-link">
+            <span>Github</span>
+          </a>
         </motion.a>
         <motion.a href="https://www.linkedin.com/in/roi-malka/" target="_blank">
-          <span>LinkedIn</span>
+          <a className="section-link">
+            <span>LinkedIn</span>
+          </a>
         </motion.a>
         <div className="logo">
           <svg
