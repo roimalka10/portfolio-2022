@@ -21,17 +21,34 @@
 
 .header .logo {
   max-width: 95px;
+  max-height: 70px;
   margin: 40px 0 0 40px;
-  z-index: 200;
+  z-index: 130;
+
   cursor: pointer;
-  background: var(--blue);
 }
 
-.header .logo img {
+.header .logo svg {
   width: 100%;
-
+  height: 100%;
   transition: 0.3s all;
-  transition-delay: 0.3s;
+  fill: var(--blue);
+}
+
+.header .menu .logo {
+  position: absolute;
+  top: 26px;
+  left: 40px;
+  margin: 0;
+}
+
+.header .menu .logo svg {
+  fill: #fff;
+  opacity: 0.35;
+}
+
+.header .menu .logo:hover svg {
+  opacity: 1;
 }
 
 /* Header Hamburger */
@@ -91,29 +108,34 @@
   border-radius: 10px;
   display: block;
   margin: 5px auto;
-  transition: 0.3s all;
+  transition: 0.2s all;
 }
 
 .header .menu.active .hamburger .bar:nth-child(2) {
   opacity: 0;
 }
+
 .header .menu.active .hamburger .bar:nth-child(1) {
   background: var(--gray);
   transform: translateY(5px) rotate(45deg);
 }
+
 .header .menu.active .hamburger .bar:nth-child(3) {
   background: var(--gray);
   transform: translateY(-11px) rotate(-45deg);
 }
+
 .header .menu.active .hamburger div {
   transform: translate(0, 0) rotate(0deg);
   transition: 0.25s all;
   margin-top: 8px;
 }
+
 .header .hamburger.open:hover div {
   transform: translate(-3px, -3px) rotate(90deg);
   transition: 0.25s all;
 }
+
 .header .menu.active .hamburger.open:hover .bar {
   background: #fff;
 }
@@ -158,7 +180,7 @@
   transition: opacity 0.4s, color 0.2s;
   font-family: "Helvetica Now Display";
   font-weight: 800;
-  font-size: 360%;
+  font-size: 100%;
   position: unset;
 }
 
@@ -199,6 +221,7 @@
   background-position: top center;
   filter: blur(2px);
 }
+
 .header .menu a:nth-child(2)::before {
   background-image: url("../images/home-image.jpg");
   background-position: 100% 15%;
@@ -214,9 +237,11 @@
 .header .menu a:nth-child(3)::before {
   background-image: url("../images/tesla2.jpg");
 }
+
 .header .menu a:nth-child(4)::before {
   background-image: url("../images/portfolio2.jpg");
 }
+
 .header .menu a:nth-child(5)::before {
   background-image: url("../images/resume-image.jpg");
   filter: blur(3px);
@@ -228,7 +253,9 @@
 
 .header .menu a span {
   position: relative;
+  font-size: 360%;
 }
+
 .header .menu a span::before,
 .header .menu a span::after {
   position: absolute;
@@ -246,10 +273,20 @@
   background-color: #fff;
   transition: all 0.35s cubic-bezier(0.694, 0.048, 0.335, 1);
 }
+
 @media (min-width: 768px) {
   .header .menu a span:hover:before,
   .header .menu a span:hover:after {
     left: 0;
     width: 100%;
   }
+}
+
+.header .menu a.section-link.active {
+  color: #fff;
+}
+
+.header .menu a.section-link.active span::after {
+  left: 0;
+  width: 100%;
 }
