@@ -10,10 +10,10 @@
   transform: translate(-50%, -50%) !important;
 }
 
-.home-gallery .name-logo img {
-  width: 700px;
+.home-gallery .name-logo svg {
+  width: 500px;
   height: 100%;
-  filter: invert(1);
+  fill: var(--blue);
 }
 
 .home-gallery .wrapper {
@@ -79,7 +79,7 @@
 }
 
 .home-gallery .scroll-to .scroll-to-icon:hover {
-  box-shadow: inset 0 0 0 2pxvar (--gray);
+  box-shadow: inset 0 0 0 2px var(--gray);
 }
 
 .home-gallery .scroll-to .scroll-to-icon:hover::after {
