@@ -24,13 +24,13 @@
   height: 100%;
   background: rgb(15 20 30 / 95%);
   z-index: 0;
-  opacity: 1;
-  transition: 0.4s all;
+  opacity: 0;
+  transition: 0.3s all;
 }
 
 .projects .list .project > a:hover::after {
-  opacity: 0;
-  transition: 1.6s all;
+  opacity: 1;
+  transition: 0.3s all;
 }
 
 .projects .list .project .project-image {
@@ -52,12 +52,13 @@
 
 .project-text h5 {
   color: #fff;
-  opacity: 0.7;
+  opacity: 0;
 }
 
 .project-text h2 {
   line-height: 40px;
   font-size: 160%;
+  opacity: 0;
 }
 
 .project-text p {
@@ -66,6 +67,7 @@
   padding: 5px 0;
   font-size: 90%;
   font-weight: 400;
+  opacity: 0;
 }
 
 .project-text .stack {
@@ -80,7 +82,7 @@
   display: flex;
   align-items: flex-end;
   gap: 10px;
-  opacity: 0.7;
+  opacity: 0;
 }
 
 .project-text .project-btn span {
@@ -88,23 +90,32 @@
 }
 
 .projects .list .project > a:hover .project-btn {
-  top: 5px;
-  opacity: 0;
+  top: 0px;
   transition-delay: 0.28s;
 }
+
+.projects .list .project > a:hover .project-text h5,
+.projects .list .project > a:hover .project-text p:not(.stack),
+.projects .list .project > a:hover .project-btn {
+  opacity: 0.7;
+}
+
 .projects .list .project > a:hover .project-text h5,
 .projects .list .project > a:hover .project-text h2,
 .projects .list .project > a:hover .project-text p {
-  opacity: 0;
-  transform: translateY(-5px);
+  opacity: 1;
+  transform: translateY(-10px);
   pointer-events: none;
 }
+
 .projects .list .project > a:hover .project-text h2 {
   transition-delay: 0.07s;
 }
+
 .projects .list .project > a:hover .project-text p:not(.stack) {
   transition-delay: 0.14s;
 }
+
 .projects .list .project > a:hover .project-text .stack {
   transition-delay: 0.21s;
 }
