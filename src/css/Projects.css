@@ -35,10 +35,16 @@
 
 .projects .list .project .project-image {
   height: 400px;
+  overflow: hidden;
 }
 
 .projects .list .project-image img {
   height: 100%;
+  transition: 0.4s all;
+}
+
+.projects .list .project > a:hover .project-image img {
+  transform: scale(1.03);
 }
 
 .project-text {
