@@ -2,7 +2,7 @@ import portfolio from "../images/portfolio1.jpg";
 import progress from "../images/workinprogress.jpg";
 import tesla from "../images/tesla.jpg";
 import weather from "../images/weatherapp.jpg";
-import Wildfire from "../images/wildfire.jpg";
+import wildfire from "../images/wildfire.jpg";
 
 export const projects = [
   {
@@ -33,7 +33,7 @@ export const projects = [
   {
     id: 4,
     title: "Wildfire-Tracker",
-    img: Wildfire,
+    img: wildfire,
     stack: "React / Sass / NASA API / Google Maps API",
     about:
       "A small project showing wildfires around the globe using nasa and google maps api's",
