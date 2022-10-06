@@ -3,6 +3,8 @@ import progress from "../images/workinprogress.jpg";
 import tesla from "../images/tesla.jpg";
 import weather from "../images/weatherapp.jpg";
 import wildfire from "../images/wildfire.jpg";
+import portfolio2022 from "../images/portfolio2022.jpg";
+import portfolio2022New from "../images/portfolio2022New.jpg";
 
 export const projects = [
   {
@@ -11,40 +13,50 @@ export const projects = [
     img: weather,
     stack: "React / Redux / Accuweather API / Sass",
     about:
-      "A weather app built to show state management using redux and Api usage displaying dynamic weather data",
+      "A weather app built to show state management using redux and Api usage displaying dynamic weather data.",
     link: "https://roi-malka-weather-app.netlify.app/",
   },
   {
     id: 2,
-    title: "Portfolio",
-    img: portfolio,
-    stack: "React / Sass / Framer Motion",
-    about: "My own personal portfolio to showcase my projects and skills.",
+    title: "Portfolio - 2022",
+    img: portfolio2022,
+    stack: "React / CSS / Axios / Framer Motion",
+    about:
+      "New and improved version of my portfolio, showing better design, code and UI/UX skills.",
     link: "https://www.roimalka.com",
   },
   {
     id: 3,
-    title: "Tesla Clone",
-    img: tesla,
-    stack: "React / Styled Components",
-    about: "A tesla home page clone showing Styled Components usage",
-    link: "https://tesla-clone-roimalka.netlify.app",
-  },
-  {
-    id: 4,
     title: "Wildfire-Tracker",
     img: wildfire,
     stack: "React / Sass / NASA API / Google Maps API",
     about:
-      "A small project showing wildfires around the globe using nasa and google maps api's",
+      "A small project showing wildfires around the globe using multiple apis.",
     link: "https://wildfires-tracker-roimalka.netlify.app",
   },
   {
+    id: 4,
+    title: "Portfolio - 2021",
+    img: portfolio,
+    stack: "React / Sass / Framer Motion",
+    about:
+      "My personal portfolio created in 2021 to showcase my projects and skills.",
+    link: "https://roimalkaportfolio-2021.netlify.app/",
+  },
+  {
     id: 5,
+    title: "Tesla Clone",
+    img: tesla,
+    stack: "React / Styled Components",
+    about: "A tesla home page clone showing Styled Components usage.",
+    link: "https://tesla-clone-roimalka.netlify.app",
+  },
+  {
+    id: 6,
     title: "Personal Trainer Studio ",
     img: progress,
     stack: "React / Sass / Framer Motion",
-    about: "— on hold",
+    about: "— on hold.",
     link: "https://github.com/roimalka10/Fitness-website",
   },
 ];
