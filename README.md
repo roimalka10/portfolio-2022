@@ -2,7 +2,7 @@
 
 #### A personal portfolio website made with React, Framer motion, Axios and more.
 
-## Lessons Learned
+## Insights
 
 After working in a real company as a front-end developer I wanted to redesign my
 portfolio using my new and polished skills and make it better both code wise and ui/ux wise.
