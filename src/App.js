@@ -22,6 +22,15 @@ const App = () => {
     }, 2000);
   }, []);
 
+  window.addEventListener("resize", appHeight);
+
+  var appHeight = function appHeight() {
+    var doc = document.documentElement;
+    doc.style.setProperty("--app-height", "".concat(window.innerHeight, "px"));
+  };
+
+  appHeight();
+
   return (
     <div className="App">
       {loading ? (
