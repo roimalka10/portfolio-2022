@@ -19,7 +19,7 @@ const App = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1800);
+    }, 2000);
   }, []);
 
   return (
@@ -30,7 +30,7 @@ const App = () => {
           initial={{ y: "0vh" }}
           animate={{ y: "-150vh" }}
           transition={{
-            duration: 0.6,
+            duration: 0.8,
             delay: 1.2,
           }}
         >
@@ -81,7 +81,7 @@ const App = () => {
           <ContactButton />
           <HomeGallery />
           <Projects />
-          <NewsList />
+          {/* <NewsList /> */}
           <ScrollToTop
             smooth
             className="up-button"
