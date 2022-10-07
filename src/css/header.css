@@ -136,7 +136,6 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  top: -100vh;
   height: 0;
   top: 0;
   left: 0;
@@ -152,7 +151,7 @@
 .header .menu.active {
   top: auto;
   bottom: 0px;
-  height: 100vh;
+  height: var(--app-height);
 }
 
 .header .menu > * {
