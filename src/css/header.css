@@ -28,7 +28,7 @@
 }
 
 .header .menu .logo {
-  position: absolute;
+  position: fixed;
   top: 26px;
   left: 40px;
   margin: 0;
@@ -60,7 +60,7 @@
 }
 
 .header .menu .hamburger {
-  position: absolute;
+  position: fixed;
   top: 40px;
   right: 40px;
 }
