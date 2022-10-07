@@ -41,3 +41,14 @@ button.up-button:hover svg {
     transform: translateY(-4px);
   }
 }
+
+@media (max-width: 767px) {
+  button.up-button {
+    box-shadow: none;
+    background: rgba(15, 20, 30, 1);
+    border: none;
+    opacity: 0.4;
+    right: 20px;
+    bottom: 20px;
+  }
+}

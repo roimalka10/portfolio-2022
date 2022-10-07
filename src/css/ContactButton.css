@@ -49,3 +49,11 @@
   transition: width 0s linear 0.2s,
     opacity 0.2s cubic-bezier(0.3, 0, 0.5, 1) 0.2s;
 }
+
+@media (max-width: 767px) {
+  .contact-link {
+    left: 20px;
+    bottom: 20px;
+    display: none;
+  }
+}

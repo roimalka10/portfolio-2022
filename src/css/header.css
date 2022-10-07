@@ -199,8 +199,7 @@
 
 @media (max-width: 767px) {
   .header .menu a {
-    font-size: 180%;
-    margin: 10px 0;
+    margin: 12px 0;
   }
 }
 
@@ -311,6 +310,12 @@
   font-size: 360%;
 }
 
+@media (max-width: 767px) {
+  .header .menu a span {
+    font-size: 180%;
+  }
+}
+
 .header .menu a span::before,
 .header .menu a span::after {
   position: absolute;
@@ -340,4 +345,20 @@
 
 .header .menu a.section-link.active {
   color: #fff;
+}
+
+@media (max-width: 767px) {
+  .header .logo {
+    max-width: 60px;
+  }
+
+  .header .menu .hamburger {
+    top: 22px;
+    right: 20px;
+  }
+
+  .header .menu .logo {
+    top: 22px;
+    left: 20px;
+  }
 }

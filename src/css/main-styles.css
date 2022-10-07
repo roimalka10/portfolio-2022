@@ -131,9 +131,27 @@ section {
 
 @media (max-width: 767px) {
   .wrapper {
-    padding: 0 20px;
+    padding: 0 50px;
+  }
+  h1 {
+    font-size: 160%;
+    line-height: 1.2;
+    margin-top: 0;
+  }
+
+  h3 {
+    font-size: 90%;
+    line-height: 1.4;
+    margin-top: 10px;
   }
 }
+
+@media (max-width: 550px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 13px;
 }
@@ -145,15 +163,9 @@ section {
 }
 
 @media (max-width: 1400px) {
-  .home-gallery .wrapper .home-row .home-main {
-    width: 58%;
-  }
 }
 
 @media (max-width: 1280px) {
-  .home-gallery .wrapper .home-row .home-main {
-    width: 65%;
-  }
 }
 
 @media (max-width: 900px) {
