@@ -151,7 +151,7 @@
 .header .menu.active {
   top: auto;
   bottom: 0px;
-  height: var(--app-height);
+  height: 100%;
 }
 
 .header .menu > * {
