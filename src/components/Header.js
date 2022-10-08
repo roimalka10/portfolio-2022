@@ -11,11 +11,11 @@ const Header = () => {
     setShowMenu(!showMenu);
   };
 
-  // if (showMenu == true) {
-  //   document.body.style.overflow = "hidden";
-  // } else {
-  //   document.body.style.overflow = "unset";
-  // }
+  if (showMenu == true) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "unset";
+  }
 
   return (
     <motion.div

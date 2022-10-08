@@ -154,6 +154,7 @@ section {
 
 ::-webkit-scrollbar {
   width: 13px;
+  width: 0;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--gray);
