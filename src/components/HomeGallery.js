@@ -86,10 +86,15 @@ const HomeGallery = ({ projectRef }) => {
                 </motion.h4>
                 <span>or</span>
                 <motion.h4 className="links-btn">
-                  <Link className="btn" to="/about">
+                  <Link className="btn" to="/">
                     Read About Me
                   </Link>
                 </motion.h4>
+                {/* <motion.h4 className="links-btn">
+                  <Link className="btn" to="/about">
+                    Read About Me
+                  </Link>
+                </motion.h4> */}
               </motion.nav>
             </div>
           </div>
