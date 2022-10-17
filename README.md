@@ -9,7 +9,7 @@ portfolio using my new and polished skills and make it better both code wise and
 
 ## Potential Future Features
 
-- - Redesiging my weather app. - DONE
+- Redesiging my weather app. - DONE
 - Redesigning my personal trainer site. - NEXT
 - Redesigning my tesla clone.
 
