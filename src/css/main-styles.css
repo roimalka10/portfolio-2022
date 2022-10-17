@@ -16,7 +16,7 @@
   line-height: 1;
   position: relative;
   text-decoration: none;
-  transition: 0.2s all;
+  /* transition: 0.2s all; */
 }
 
 body {

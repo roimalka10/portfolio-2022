@@ -59,12 +59,14 @@
 .project-text h5 {
   color: #fff;
   opacity: 0;
+  transition: 0.4s all;
 }
 
 .project-text h2 {
   line-height: 40px;
   font-size: 160%;
   opacity: 0;
+  transition: 0.4s all;
 }
 
 .project-text p {
@@ -74,6 +76,7 @@
   font-size: 90%;
   font-weight: 400;
   opacity: 0;
+  transition: 0.4s all;
 }
 
 .project-text .stack {
@@ -89,6 +92,7 @@
   align-items: flex-end;
   gap: 10px;
   opacity: 0;
+  transition: 0.4s all;
 }
 
 .project-text .project-btn span {
