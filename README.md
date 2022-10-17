@@ -10,6 +10,7 @@ portfolio using my new and polished skills and make it better both code wise and
 ## Potential Future Features
 
 - Redesigning my firetracker site.
+- Redesigning my personal trainer site. - NEXT
 - Redesiging my weather app. - DONE
 
 Used Create-React-App for this project so to run locally
