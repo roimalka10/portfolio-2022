@@ -6,6 +6,7 @@ button.up-button {
   width: 46px;
   height: 46px;
   z-index: 900;
+  box-shadow: none;
 }
 
 button.up-button svg {

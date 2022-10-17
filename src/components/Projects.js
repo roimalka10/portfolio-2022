@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "../css/Projects.css";
 import { projects } from "../projects-data/projects-data";
 import { FaArrowRight } from "react-icons/fa";
 
-const Projects = () => {
+const Projects = forwardRef((props, ref) => {
   return (
     <>
-      <section className="projects" id="projects">
+      <section className="projects" ref={ref}>
         <div className="wrapper">
           <div className="headline">
             <h5>What's New</h5>
@@ -41,6 +41,6 @@ const Projects = () => {
       </section>
     </>
   );
-};
+});
 
 export default Projects;
