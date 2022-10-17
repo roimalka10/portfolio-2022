@@ -5,6 +5,7 @@ import weather from "../images/weatherapp.jpg";
 import wildfire from "../images/wildfire.jpg";
 import portfolio2022 from "../images/portfolio2022.jpg";
 import portfolio2022New from "../images/portfolio2022New.jpg";
+import calculator from "../images/calculator.jpg";
 
 export const projects = [
   {
@@ -25,14 +26,22 @@ export const projects = [
       "New and improved version of my portfolio, showing better design, code and UI/UX skills.",
     link: "https://www.roimalka.com",
   },
+  // {
+  //   id: 3,
+  //   title: "Wildfire-Tracker",
+  //   img: wildfire,
+  //   stack: "React / Sass / NASA API / Google Maps API",
+  //   about:
+  //     "A small project showing wildfires around the globe using multiple apis.",
+  //   link: "https://wildfires-tracker-roimalka.netlify.app",
+  // },
   {
     id: 3,
-    title: "Wildfire-Tracker",
-    img: wildfire,
-    stack: "React / Sass / NASA API / Google Maps API",
-    about:
-      "A small project showing wildfires around the globe using multiple apis.",
-    link: "https://wildfires-tracker-roimalka.netlify.app",
+    title: "Calculator",
+    img: calculator,
+    stack: "HTML / CSS / JS",
+    about: "A basic calculator app made when I first started coding.",
+    link: "https://roimalka-calculator.netlify.app/",
   },
   {
     id: 4,
