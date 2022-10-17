@@ -9,9 +9,9 @@ portfolio using my new and polished skills and make it better both code wise and
 
 ## Potential Future Features
 
-- Redesigning my firetracker site.
+- - Redesiging my weather app. - DONE
 - Redesigning my personal trainer site. - NEXT
-- Redesiging my weather app. - DONE
+- Redesigning my tesla clone.
 
 Used Create-React-App for this project so to run locally
 
