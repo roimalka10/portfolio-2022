@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../css/header.css";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import resume from "../images/roimalkaCV-2.pdf";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [header, setHeader] = useState(false);
 
   const handleClick = () => {
     setShowMenu(!showMenu);
@@ -17,21 +18,24 @@ const Header = () => {
     document.body.style.overflow = "unset";
   }
 
+  const changeBackground = () => {
+    if (window.scrollY >= 70) {
+      setHeader(true);
+    } else {
+      setHeader(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
     <motion.div
-      className="header"
+      className={header ? "header active" : "header"}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.6, type: "tween" }}
     >
-      <Link
-        activeClass="active"
-        to="home-id"
-        spy={true}
-        smooth={true}
-        duration={800}
-        className="logo"
-      >
+      <Link activeClass="active" to="/" className="logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="383.41"
@@ -45,7 +49,7 @@ const Header = () => {
           />
         </svg>
       </Link>
-      <motion.div
+      <motion.ul
         onClick={handleClick}
         className={showMenu ? "menu active" : "menu"}
       >
@@ -60,57 +64,37 @@ const Header = () => {
             <span className="bar"></span>
           </div>
         </div>
-        <motion.a activeClass="active">
-          <Link
-            to="home-id"
-            spy={true}
-            smooth={true}
-            duration={800}
-            offset={20}
-            onClick={handleClick}
-            className="section-link"
-          >
+        <motion.li activeClass="active" onClick={handleClick}>
+          <Link to="/">
             <span>Home</span>
           </Link>
-        </motion.a>
-        <motion.a activeClass="active">
-          <Link
-            to="projects"
-            spy={true}
-            smooth={true}
-            duration={800}
-            offset={20}
-            onClick={handleClick}
-            className="section-link"
-          >
-            <span>Projects</span>
-          </Link>
-        </motion.a>
-        <motion.a activeClass="active" className="span-contact" href="#contact">
-          <a className="section-link">
+        </motion.li>
+        <motion.li
+          activeClass="active"
+          className="span-contact"
+          onClick={handleClick}
+        >
+          <Link to="/about">
             <span>About</span>
-          </a>
-        </motion.a>
-        <motion.a
+          </Link>
+        </motion.li>
+        <motion.li
           activeClass="active"
           className="span-resume"
           href={resume}
           download
         >
-          <a className="section-link">
-            <span>Resume</span>
-          </a>
-        </motion.a>
-        <motion.a href="https://github.com/roimalka10" target="_blank">
-          <a className="section-link">
-            <span>Github</span>
-          </a>
-        </motion.a>
-        <motion.a href="https://www.linkedin.com/in/roi-malka/" target="_blank">
-          <a className="section-link">
-            <span>LinkedIn</span>
-          </a>
-        </motion.a>
+          <span>Resume</span>
+        </motion.li>
+        <motion.li href="https://github.com/roimalka10" target="_blank">
+          <span>Github</span>
+        </motion.li>
+        <motion.li
+          href="https://www.linkedin.com/in/roi-malka/"
+          target="_blank"
+        >
+          <span>LinkedIn</span>
+        </motion.li>
         <div className="logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +109,7 @@ const Header = () => {
             />
           </svg>
         </div>
-      </motion.div>
+      </motion.ul>
       <div
         onClick={handleClick}
         className={showMenu ? "hamburger open" : "hamburger"}

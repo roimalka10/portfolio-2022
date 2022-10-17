@@ -1,13 +1,17 @@
 import React from "react";
 import "../css/HomeGallery.css";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const HomeGallery = () => {
+const HomeGallery = ({ projectRef }) => {
+  const ProjectsClick = () => {
+    projectRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
-      <section className="home-gallery" name="home-id">
+      <section className="home-gallery">
         <motion.div
           className="name-logo"
           initial={{ opacity: 0 }}
@@ -38,7 +42,7 @@ const HomeGallery = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.3,
-                  delay: 1,
+                  delay: 0.7,
                 }}
               >
                 Roi Malka
@@ -48,7 +52,7 @@ const HomeGallery = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.3,
-                  delay: 1.3,
+                  delay: 1,
                 }}
               >
                 JavaScript & React Front-End developer
@@ -59,7 +63,7 @@ const HomeGallery = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.3,
-                  delay: 1.6,
+                  delay: 1.3,
                 }}
               >
                 A Front-End developer with industry experience building websites
@@ -72,46 +76,32 @@ const HomeGallery = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.3,
-                  delay: 1.9,
+                  delay: 1.6,
                 }}
               >
                 <motion.h4 className="links-btn">
-                  <Link
-                    className="btn"
-                    to="projects"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    offset={20}
-                  >
+                  <Link className="btn" onClick={ProjectsClick}>
                     View Projects
                   </Link>
                 </motion.h4>
                 <span>or</span>
                 <motion.h4 className="links-btn">
-                  <Link
-                    className="btn"
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    duration={0}
-                    offset={20}
-                    href="#"
-                  >
+                  <Link className="btn" to="/about">
                     Read About Me
                   </Link>
                 </motion.h4>
               </motion.nav>
             </div>
           </div>
-          <Link to="projects" spy={true} smooth={true} duration={500}>
+          <Link>
             <motion.a
+              onClick={ProjectsClick}
               className="scroll-to"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.3,
-                delay: 2.1,
+                delay: 1.8,
               }}
             >
               <div className="scroll-to-icon"></div>
@@ -124,7 +114,7 @@ const HomeGallery = () => {
           animate={{ opacity: 1 }}
           transition={{
             duration: 0.6,
-            delay: 0.8,
+            delay: 0.5,
           }}
         >
           <li>
