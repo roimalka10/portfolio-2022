@@ -29,7 +29,7 @@
 }
 
 .projects .list .project > a:hover::after {
-  opacity: 1;
+  opacity: 1 !important;
   transition: 0.3s all;
 }
 
@@ -136,12 +136,12 @@
   }
 
   .projects .list {
-    margin: 65px 0px -30px 0px;
+    margin: 65px 0px 30px 0px;
   }
 
   .projects .list .project {
     margin: 0px 0 30px 0;
-    width: 100%;
+    width: 100% !important;
   }
 
   .projects .list .project .project-image {
@@ -150,7 +150,7 @@
 
   .project-text {
     padding: 0 30px;
-    max-width: 100%;
+    width: 100% !important;
     top: 30px;
   }
 
