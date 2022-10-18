@@ -124,14 +124,11 @@ section {
 }
 
 @media (max-width: 1024px) {
-  .wrapper {
-    padding: 0 30px;
-  }
 }
 
 @media (max-width: 767px) {
   .wrapper {
-    padding: 0 50px;
+    padding: 0 15px;
   }
   h1 {
     font-size: 160%;
@@ -147,9 +144,6 @@ section {
 }
 
 @media (max-width: 550px) {
-  .wrapper {
-    padding: 0 15px;
-  }
 }
 
 ::-webkit-scrollbar {

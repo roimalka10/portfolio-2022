@@ -15,7 +15,7 @@ const App = () => {
   const location = useLocation();
   window.addEventListener("resize", appHeight);
 
-  var appHeight = function appHeight() {
+  var appHeight = function () {
     var doc = document.documentElement;
     doc.style.setProperty("--app-height", "".concat(window.innerHeight, "px"));
   };
