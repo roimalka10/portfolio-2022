@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import HomePage from "./containers/HomePage";
 import About from "./containers/About";
 import { Route, Routes, useLocation } from "react-router";
+import ScrollToTopRoute from "./Reusables/ScrollToTopRoute";
 
 const App = () => {
   const location = useLocation();
@@ -28,9 +29,10 @@ const App = () => {
         <Header projectRef={projectRef} />
         <ContactButton />
         <AnimatePresence exitBeforeEnter>
+          <ScrollToTopRoute />
           <Routes key={location.pathname} location={location}>
             <Route path="/" element={<HomePage projectRef={projectRef} />} />
-            {/* <Route path="/about" element={<About projectRef={projectRef} />} /> */}
+            <Route path="/about" element={<About projectRef={projectRef} />} />
           </Routes>
         </AnimatePresence>
         <ScrollToTop smooth className="up-button" component={<ImArrowUp2 />} />
