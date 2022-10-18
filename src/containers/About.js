@@ -43,7 +43,19 @@ const About = () => {
         <AnimateFav>
           <h1>Page A</h1>
           <Link to="/">Home</Link>
-          <h1>HELLO BITCH ASS BITCH</h1>
+          <h1>HELLO THIS IS ABOUT PAGE</h1>
+          <h1>Page A</h1>
+          <Link to="/">Home</Link>
+          <h1>HELLO THIS IS ABOUT PAGE</h1>
+          <h1>Page A</h1>
+          <Link to="/">Home</Link>
+          <h1>HELLO THIS IS ABOUT PAGE</h1>
+          <h1>Page A</h1>
+          <Link to="/">Home</Link>
+          <h1>HELLO THIS IS ABOUT PAGE</h1>
+          <h1>Page A</h1>
+          <Link to="/">Home</Link>
+          <h1>HELLO THIS IS ABOUT PAGE</h1>
         </AnimateFav>
       )}
     </>
