@@ -12,7 +12,7 @@ const animations = {
   },
 };
 
-const AnimateHome = ({ children }) => {
+const AnimateAbout = ({ children }) => {
   return (
     <motion.div
       className="fav-transition"
@@ -27,4 +27,4 @@ const AnimateHome = ({ children }) => {
   );
 };
 
-export default AnimateHome;
+export default AnimateAbout;

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BounceLoader } from "react-spinners";
-import AnimateFav from "../components/Animate/AnimateFav";
+import AnimateFav from "../components/Animate/AnimateAbout";
 import "../css/About.css";
 import UseLoading from "../Reusables/UseLoading";
 
@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       {loading ? (
-        <motion.div className="fav-loader">
+        <motion.div className="about-loader">
           <div className="bounce-icon">
             <BounceLoader color="#bfbfbf" />
           </div>
