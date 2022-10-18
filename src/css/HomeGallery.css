@@ -165,7 +165,7 @@
 }
 @media (max-width: 767px) {
   section.home-gallery {
-    height: calc(100vh - 84px);
+    height: calc(var(--app-height) - 84px);
   }
 }
 

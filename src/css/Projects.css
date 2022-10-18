@@ -175,6 +175,10 @@
     height: 100%;
   }
 
+  .projects .list .project .project-image img {
+    min-height: 300px;
+  }
+
   .project-text {
     padding: 0 30px;
     width: 100% !important;
