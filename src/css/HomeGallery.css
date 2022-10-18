@@ -37,6 +37,11 @@
   width: 100%;
 }
 
+h3.home-text {
+  color: var(--gray);
+  font-weight: 500;
+}
+
 .home-gallery .icons {
   position: absolute;
   right: 40px;
