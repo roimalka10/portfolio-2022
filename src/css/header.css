@@ -7,7 +7,7 @@
   padding: 30px 40px;
   z-index: 1000;
   position: fixed;
-
+  pointer-events: none;
   top: 0;
   left: 0px;
 }
@@ -16,7 +16,7 @@
   max-width: 95px;
   max-height: 70px;
   z-index: 130;
-
+  pointer-events: auto;
   cursor: pointer;
 }
 
@@ -53,6 +53,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+  pointer-events: auto;
 }
 
 .header > .hamburger {
