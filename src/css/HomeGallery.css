@@ -172,6 +172,7 @@
 @media (max-width: 380px) {
   .home-gallery .name-logo {
     width: 90%;
+    top: 26%;
   }
   .home-gallery .wrapper {
     bottom: 10px;
