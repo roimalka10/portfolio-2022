@@ -2,10 +2,13 @@ import portfolio from "../images/portfolio1.jpg";
 import progress from "../images/workinprogress.jpg";
 import tesla from "../images/tesla.jpg";
 import weather from "../images/weatherapp.jpg";
+import weatherNew from "../images/weathernew.png";
 import wildfire from "../images/wildfire.jpg";
 import portfolio2022 from "../images/portfolio2022.jpg";
 import portfolio2022New from "../images/portfolio2022New.jpg";
 import calculator from "../images/calculator.jpg";
+import laptoptrainer from "../images/laptoptrainer.jpg";
+import tabletport2021 from "../images/tabletport2021.jpg";
 
 export const projects = [
   {
@@ -46,7 +49,7 @@ export const projects = [
   {
     id: 4,
     title: "Portfolio - 2021",
-    img: portfolio,
+    img: tabletport2021,
     stack: "React / Sass / Framer Motion",
     about:
       "My personal portfolio created in 2021 to showcase my projects and skills.",
@@ -63,7 +66,7 @@ export const projects = [
   {
     id: 6,
     title: "Personal Trainer Studio ",
-    img: progress,
+    img: laptoptrainer,
     stack: "React / Sass / Framer Motion",
     about: "— on hold.",
     link: "https://github.com/roimalka10/Fitness-website",

@@ -176,10 +176,19 @@
   opacity: 0;
 }
 
+.header .menu:hover li {
+  color: var(--gray);
+}
+
+.header .menu:hover li:hover {
+  color: #fff;
+}
+
 .header .menu li {
   margin: 6px 0;
   text-decoration: none;
   color: var(--gray);
+  color: #fff;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.4s, color 0.2s;
