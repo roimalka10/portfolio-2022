@@ -90,11 +90,6 @@ const HomeGallery = ({ projectRef }) => {
                     Read About Me
                   </Link>
                 </motion.h4>
-                {/* <motion.h4 className="links-btn">
-                  <Link className="btn" to="/about">
-                    Read About Me
-                  </Link>
-                </motion.h4> */}
               </motion.nav>
             </div>
           </div>

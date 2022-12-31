@@ -6,6 +6,7 @@ import { BounceLoader } from "react-spinners";
 import AnimateHome from "../components/Animate/AnimateHome";
 import "../css/HomePage.css";
 import UseLoading from "../Reusables/UseLoading";
+import Footer from "../components/Footer";
 
 const HomePage = ({ projectRef }) => {
   const [loading] = UseLoading();
@@ -43,6 +44,7 @@ const HomePage = ({ projectRef }) => {
         <AnimateHome>
           <HomeGallery projectRef={projectRef} />
           <Projects ref={projectRef} />
+          <Footer />
         </AnimateHome>
       )}
     </>

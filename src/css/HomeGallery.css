@@ -21,7 +21,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  padding: 0 30px;
+  padding: 0 40px;
   bottom: 20px;
 }
 
@@ -99,7 +99,7 @@ h3.home-text {
   height: 7px;
   background: var(--blue);
   margin-left: 10px;
-  top: 8px;
+  top: 10px;
   border-radius: 2px;
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -125,17 +125,9 @@ h3.home-text {
   }
 }
 @media (max-width: 767px) {
-  /* .home-gallery .name-logo {
-    top: 31%;
-  }
-
-  .home-gallery .name-logo svg {
-    width: 300px;
-  } */
-
   .home-gallery .name-logo {
     top: 28%;
-    width: 95%;
+    width: 92%;
   }
 
   .home-gallery .name-logo svg {
@@ -145,13 +137,9 @@ h3.home-text {
   .home-gallery .icons {
     display: none;
   }
-  /* .home-gallery .wrapper {
-    padding: 0 15px;
-    bottom: 65px;
-  } */
 
   .home-gallery .wrapper {
-    padding: 0 15px;
+    padding: 0 20px;
   }
 
   .home-gallery .wrapper .home-row .home-main h1 {
