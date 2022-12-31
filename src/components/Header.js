@@ -78,15 +78,6 @@ const Header = () => {
             <span>About</span>
           </Link>
         </motion.li>
-        {/* <motion.li
-          activeClass="active"
-          className="span-contact"
-          onClick={handleClick}
-        >
-          <Link to="/about">
-            <span>About</span>
-          </Link>
-        </motion.li> */}
         <motion.li
           activeClass="active"
           className="span-resume"

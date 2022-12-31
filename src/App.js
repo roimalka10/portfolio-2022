@@ -10,7 +10,6 @@ import HomePage from "./containers/HomePage";
 import About from "./containers/About";
 import { Route, Routes, useLocation } from "react-router";
 import ScrollToTopRoute from "./Reusables/ScrollToTopRoute";
-import Footer from "./components/Footer";
 
 const App = () => {
   const location = useLocation();
@@ -36,7 +35,6 @@ const App = () => {
             {/* <Route path="/about" element={<About projectRef={projectRef} />} /> */}
           </Routes>
         </AnimatePresence>
-        {/* <Footer /> */}
         <ScrollToTop smooth className="up-button" component={<ImArrowUp2 />} />
       </div>
     </div>
