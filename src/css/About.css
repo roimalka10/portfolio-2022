@@ -1,13 +1,13 @@
-.fav-transition {
+.about-transition {
   height: 100%;
   display: flex;
-  padding: 120px 0;
+  padding: 120px 0 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.fav-loader {
+.about-loader {
   position: fixed;
   width: 100vw;
   overflow: hidden;
@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: center;
 }
-.fav-loader::after {
+.about-loader::after {
   content: "";
   position: absolute;
   top: 0;
@@ -51,7 +51,7 @@
   }
 }
 
-.fav-loader .bounce-icon {
+.about-loader .bounce-icon {
   display: inline-flex;
   animation: mymove 2.3s;
   animation-iteration-count: 1;

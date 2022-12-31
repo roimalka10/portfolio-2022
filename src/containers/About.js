@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BounceLoader } from "react-spinners";
-import AnimateFav from "../components/Animate/AnimateAbout";
+import AnimateAbout from "../components/Animate/AnimateAbout";
 import "../css/About.css";
 import UseLoading from "../Reusables/UseLoading";
+import Footer from "../components/Footer";
 
 const About = () => {
   const [loading] = UseLoading();
@@ -40,7 +41,7 @@ const About = () => {
           </div>
         </motion.div>
       ) : (
-        <AnimateFav>
+        <AnimateAbout>
           <h1>Page A</h1>
           <Link to="/">Home</Link>
           <h1>HELLO THIS IS ABOUT PAGE</h1>
@@ -56,7 +57,8 @@ const About = () => {
           <h1>Page A</h1>
           <Link to="/">Home</Link>
           <h1>HELLO THIS IS ABOUT PAGE</h1>
-        </AnimateFav>
+          <Footer />
+        </AnimateAbout>
       )}
     </>
   );
