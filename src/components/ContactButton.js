@@ -6,7 +6,8 @@ const ContactButton = () => {
   return (
     <>
       <motion.a
-        href="#"
+        href="https://chatwith.io/s/roi-malka"
+        target="_blank"
         className="contact-link"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
