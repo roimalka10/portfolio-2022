@@ -143,11 +143,11 @@ h3.home-text {
   }
 
   .home-gallery .wrapper .home-row .home-main h1 {
-    max-width: 95%;
+    max-width: 100%;
   }
 
   .home-gallery .wrapper .home-row .home-main h3.home-text {
-    max-width: 90%;
+    max-width: 95%;
   }
   nav.links {
     margin-top: 10px;
