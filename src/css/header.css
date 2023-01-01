@@ -146,6 +146,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  pointer-events: all;
   z-index: 150;
   list-style: none;
 }
