@@ -49,7 +49,11 @@
   height: 100%;
   transition: 0.5s all;
   object-fit: cover;
-  object-position: center 60%;
+  object-position: center 50%;
+}
+
+.projects .list .project6 .project-image .project-image-container img {
+  object-position: center 80%;
 }
 
 .projects .list .project .project-image:hover .project-image-container img {

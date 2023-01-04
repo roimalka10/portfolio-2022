@@ -1,6 +1,7 @@
 import portfolio from "../images/portfolio1.jpg";
 import progress from "../images/workinprogress.jpg";
 import tesla from "../images/tesla.jpg";
+import teslaNew from "../images/tesla-image.jpg";
 import weather from "../images/weatherapp.jpg";
 import weatherNew from "../images/weathernew.png";
 import wildfire from "../images/wildfire.jpg";
@@ -13,8 +14,8 @@ import tabletport2021 from "../images/tabletport2021.jpg";
 export const projects = [
   {
     id: 1,
-    title: "WeatherApp",
-    img: weather,
+    title: "Weather App",
+    img: weatherNew,
     stack: "React / Redux / Accuweather API / Sass",
     about:
       "A weather app built to show state management using redux and Api usage displaying dynamic weather data.",
@@ -58,7 +59,7 @@ export const projects = [
   {
     id: 5,
     title: "Tesla Clone",
-    img: tesla,
+    img: teslaNew,
     stack: "React / Styled Components",
     about: "A tesla home page clone showing Styled Components usage.",
     link: "https://tesla-clone-roimalka.netlify.app",
