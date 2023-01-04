@@ -20,11 +20,11 @@
   background: #0f141e;
   width: 100vw;
   overflow: hidden;
-  height: 100vh;
-  animation: hometransition 2.3s;
+  height: 100%;
+  animation: TopTransition 2.4s;
 }
 
-@keyframes hometransition {
+@keyframes TopTransition {
   0% {
     transform: translateY(100%);
   }
@@ -40,21 +40,47 @@
   100% {
     transform: translateY(-100%);
   }
+  100% {
+    transform: translateY(-100%);
+  }
 }
+
+/* @keyframes TopTransition {
+  0% {
+    transform: translateY(100%);
+  }
+  17% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(0%);
+  }
+  32% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-100%);
+  }
+  75% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+} */
 
 .home-loader .bounce-icon {
   display: inline-flex;
-  animation: mymove 2.3s;
-  animation-iteration-count: 1;
+  animation: mymove 2.4s;
 }
 
 .loader-text {
   position: absolute;
   left: 60px;
   bottom: 10px;
-  animation: mymove 2.3s;
-  animation-iteration-count: 1;
+  animation: mymove 2.4s;
   text-align: left;
+  opacity: 0;
 }
 
 @keyframes mymove {
@@ -90,13 +116,6 @@
   color: #878a8f;
 }
 @media (max-width: 767px) {
-  .loader .loader-logo {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    max-width: 95px;
-    max-height: 70px;
-  }
   .loader-text {
     position: absolute;
     left: 20px;

@@ -13,27 +13,33 @@ const HomePage = ({ projectRef }) => {
   return (
     <>
       {loading ? (
-        <motion.div className="home-loader">
+        <motion.div
+          className="home-loader"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 2.1,
+          }}
+        >
           <div className="bounce-icon">
             <BounceLoader color="#bfbfbf" />
           </div>
           <div className="loader-text">
             <motion.h5
-              initial={{ y: 0 }}
+              initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: -40 }}
               transition={{
                 duration: 0.35,
-                delay: 0,
               }}
             >
               Welcome
             </motion.h5>
             <motion.h1
-              initial={{ y: 0 }}
+              initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: -40 }}
               transition={{
                 duration: 0.35,
-                delay: 0,
               }}
             >
               Home Page

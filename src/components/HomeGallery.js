@@ -86,7 +86,7 @@ const HomeGallery = ({ projectRef }) => {
                 </motion.h4>
                 <span>or</span>
                 <motion.h4 className="links-btn">
-                  <Link className="btn" to="/">
+                  <Link className="btn" to="/about">
                     Read About Me
                   </Link>
                 </motion.h4>

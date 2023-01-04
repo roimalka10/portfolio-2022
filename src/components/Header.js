@@ -74,7 +74,7 @@ const Header = () => {
           className="span-contact"
           onClick={handleClick}
         >
-          <Link to="/">
+          <Link to="/about">
             <span>About</span>
           </Link>
         </motion.li>
