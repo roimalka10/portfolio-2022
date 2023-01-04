@@ -9,7 +9,7 @@ const animations = {
 const AnimateHome = ({ children }) => {
   return (
     <motion.div
-      className="home-transition"
+      className="top-transition home"
       variants={animations}
       exit="exit"
       transition={{ duration: 0.5 }}

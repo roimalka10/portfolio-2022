@@ -15,7 +15,7 @@ const animations = {
 const AnimateAbout = ({ children }) => {
   return (
     <motion.div
-      className="about-transition"
+      className="left-transition about"
       variants={animations}
       initial="initial"
       animate="animate"
