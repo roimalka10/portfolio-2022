@@ -13,27 +13,33 @@ const About = () => {
   return (
     <>
       {loading ? (
-        <motion.div className="about-loader">
+        <motion.div
+          className="about-loader"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 2.1,
+          }}
+        >
           <div className="bounce-icon">
             <BounceLoader color="#bfbfbf" />
           </div>
           <div className="loader-text">
             <motion.h5
-              initial={{ y: 0 }}
+              initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: -40 }}
               transition={{
                 duration: 0.35,
-                delay: 0,
               }}
             >
               About Me
             </motion.h5>
             <motion.h1
-              initial={{ y: 0 }}
+              initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: -40 }}
               transition={{
                 duration: 0.35,
-                delay: 0,
               }}
             >
               Front-End Developer
@@ -42,21 +48,20 @@ const About = () => {
         </motion.div>
       ) : (
         <AnimateAbout>
-          <h1>Page A</h1>
+          <h1>ABOUT PAGE TESTING</h1>
           <Link to="/">Home</Link>
-          <h1>HELLO THIS IS ABOUT PAGE</h1>
-          <h1>Page A</h1>
-          <Link to="/">Home</Link>
-          <h1>HELLO THIS IS ABOUT PAGE</h1>
-          <h1>Page A</h1>
-          <Link to="/">Home</Link>
-          <h1>HELLO THIS IS ABOUT PAGE</h1>
-          <h1>Page A</h1>
-          <Link to="/">Home</Link>
-          <h1>HELLO THIS IS ABOUT PAGE</h1>
-          <h1>Page A</h1>
-          <Link to="/">Home</Link>
-          <h1>HELLO THIS IS ABOUT PAGE</h1>
+          <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            ipsum natus error consequatur debitis impedit doloribus quia nam hic
+            architecto officia quos accusantium, amet quaerat id, rem delectus
+            non est! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Inventore delectus, repudiandae eos saepe quasi fugit in laboriosam
+            facilis doloribus corporis provident qui voluptates necessitatibus
+            nam consequatur iste illo quis pariatur. Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Officia maiores cum aliquam, culpa
+            facilis corporis, neque eius ipsa placeat distinctio modi quos
+            tenetur praesentium ad aspernatur! Adipisci, porro. Animi, minus.
+          </h1>
           <Footer />
         </AnimateAbout>
       )}

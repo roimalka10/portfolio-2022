@@ -29,11 +29,11 @@
   background: #0f141e;
   width: 100vw;
   overflow: hidden;
-  height: 100vh;
-  animation: pagetransition 2.3s;
+  height: 100%;
+  animation: LeftTransition 2.4s;
 }
 
-@keyframes pagetransition {
+@keyframes LeftTransition {
   0% {
     transform: translateX(-100%);
   }
@@ -43,8 +43,8 @@
   50% {
     transform: translateX(0%);
   }
-  65% {
-    transform: translateX(0%);
+  100% {
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(100%);
@@ -53,6 +53,5 @@
 
 .about-loader .bounce-icon {
   display: inline-flex;
-  animation: mymove 2.3s;
-  animation-iteration-count: 1;
+  animation: mymove 2.4s;
 }
