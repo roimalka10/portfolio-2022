@@ -3,8 +3,8 @@ import HomeGallery from "../components/HomeGallery";
 import Projects from "../components/Projects";
 import { motion } from "framer-motion";
 import { BounceLoader } from "react-spinners";
-import AnimateHome from "../components/Animate/AnimateHome";
-import "../css/HomePage.css";
+import AnimateTop from "../components/Animate/AnimateTop";
+import "../css/Home.css";
 import UseLoading from "../Reusables/UseLoading";
 import Footer from "../components/Footer";
 
@@ -19,7 +19,7 @@ const HomePage = ({ projectRef }) => {
           animate={{ opacity: 0 }}
           transition={{
             duration: 0.5,
-            delay: 2.1,
+            delay: 2,
           }}
         >
           <div className="bounce-icon">
@@ -47,11 +47,11 @@ const HomePage = ({ projectRef }) => {
           </div>
         </motion.div>
       ) : (
-        <AnimateHome>
+        <AnimateTop>
           <HomeGallery projectRef={projectRef} />
           <Projects ref={projectRef} />
           <Footer />
-        </AnimateHome>
+        </AnimateTop>
       )}
     </>
   );
