@@ -6,7 +6,7 @@ const animations = {
   },
 };
 
-const AnimateHome = ({ children }) => {
+const AnimateTop = ({ children }) => {
   return (
     <motion.div
       className="top-transition home"
@@ -19,4 +19,4 @@ const AnimateHome = ({ children }) => {
   );
 };
 
-export default AnimateHome;
+export default AnimateTop;

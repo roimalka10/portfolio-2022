@@ -12,7 +12,7 @@ const animations = {
   },
 };
 
-const AnimateAbout = ({ children }) => {
+const AnimateLeft = ({ children }) => {
   return (
     <motion.div
       className="left-transition about"
@@ -29,4 +29,4 @@ const AnimateAbout = ({ children }) => {
   );
 };
 
-export default AnimateAbout;
+export default AnimateLeft;
