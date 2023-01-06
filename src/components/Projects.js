@@ -24,10 +24,10 @@ const Projects = forwardRef((props, ref) => {
             <h1>Projects</h1>
           </motion.div>
           <div className="list">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <motion.div
-                key={project.id}
-                className={`project project${project.id}`}
+                key={index + 1}
+                className={`project project${index + 1}`}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -45,10 +45,10 @@ const Projects = forwardRef((props, ref) => {
                   <div className="project-image-container">
                     <img src={project.img} />
                   </div>
-                  <div className="image-number">0{project.id}</div>
+                  <div className="image-number">0{index + 1}</div>
                 </a>
                 <div className="project-text">
-                  <h5>0{project.id}</h5>
+                  <h5>0{index + 1}</h5>
                   <h2>{project.title}</h2>
                   <p>{project.about}</p>
                   <p className="stack">{project.stack}</p>

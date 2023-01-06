@@ -1,7 +1,7 @@
 @import url("../fonts/style.css");
 
 :root {
-  --blue: #0f141e;
+  --blue: #161e30;
   --gray: #878a8f;
 }
 
@@ -16,7 +16,6 @@
   line-height: 1;
   position: relative;
   text-decoration: none;
-  /* transition: 0.2s all; */
 }
 
 body {
@@ -36,8 +35,14 @@ img {
 h1 {
   margin-top: 15px;
   font-size: 360%;
-  padding-top: 1px;
-  padding-bottom: 4px;
+  padding: 1px 0 4px;
+  color: var(--blue);
+}
+
+h2 {
+  font-size: 220%;
+  line-height: 1.14;
+  margin: 10px auto 20px;
   color: var(--blue);
 }
 
@@ -46,14 +51,12 @@ h3 {
   font-weight: 800;
   color: var(--blue);
   font-size: 110%;
-  padding-top: 2px;
-  padding-bottom: 3px;
+  padding: 2px 0 3px;
   line-height: 30px;
 }
 
 h4 {
-  padding-top: 1px;
-  padding-bottom: 4px;
+  padding: 1px 0 4px;
   font-size: 90%;
   line-height: 1.4em;
 }
@@ -61,8 +64,7 @@ h4 {
 h5 {
   font-size: 70%;
   text-transform: uppercase;
-  padding-top: 5px;
-  padding-bottom: 8px;
+  padding: 5px 0 8px;
   color: var(--gray);
   font-weight: 400;
   letter-spacing: 5px;
