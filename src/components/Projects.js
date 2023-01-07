@@ -13,11 +13,11 @@ const Projects = forwardRef((props, ref) => {
             className="headline"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.45 }}
+            transition={{ duration: 0.6 }}
             variants={{
               visible: { opacity: 1, y: 0 },
-              hidden: { opacity: 0, y: 40 },
+              hidden: { opacity: 0, y: 50 },
             }}
           >
             <h5>What's New</h5>
@@ -30,11 +30,11 @@ const Projects = forwardRef((props, ref) => {
                 className={`project project${index + 1}`}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.35 }}
+                transition={{ duration: 0.6 }}
                 variants={{
                   visible: { opacity: 1, y: 0 },
-                  hidden: { opacity: 0, y: 40 },
+                  hidden: { opacity: 0, y: 50 },
                 }}
               >
                 <a

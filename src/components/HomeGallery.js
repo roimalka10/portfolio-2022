@@ -2,7 +2,7 @@ import React from "react";
 import "../css/HomeGallery.css";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const HomeGallery = ({ projectRef }) => {
   const ProjectsClick = () => {
@@ -86,9 +86,9 @@ const HomeGallery = ({ projectRef }) => {
                 </motion.h4>
                 <span>or</span>
                 <motion.h4 className="links-btn">
-                  <Link className="btn" to="/about">
+                  <NavLink className="btn" to="/about">
                     Read About Me
-                  </Link>
+                  </NavLink>
                 </motion.h4>
               </motion.nav>
             </div>
