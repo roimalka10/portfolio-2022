@@ -1,13 +1,43 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { BounceLoader } from "react-spinners";
 import AnimateLeft from "../components/Animate/AnimateLeft";
 import "../css/About.css";
 import UseLoading from "../Reusables/UseLoading";
+import emailjs from "@emailjs/browser";
 import Footer from "../components/Footer";
 
 const About = () => {
+  const form = useRef();
   const [loading] = UseLoading();
+  const [Name, setName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Massage, setMassage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    setName("");
+    setEmail("");
+    setMassage("");
+
+    emailjs
+      .sendForm(
+        "service_cz0funu",
+        "template_ohceoko",
+        form.current,
+        "c-25Ng17awyf5yYj1"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Your email has been sent.");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <>
@@ -125,17 +155,72 @@ const About = () => {
                 </div>
               </div>
             </motion.section>
-            <section className="contact">
+            <motion.section
+              className="contact"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{ duration: 0.6 }}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 50 },
+              }}
+            >
               <div className="wrapper">
                 <div className="contact-headline">
                   <div>
                     <h5>Contact</h5>
-                    <h1>Get in touch - let's work together.</h1>
+                    <h2>Get in touch - let's work together.</h2>
                   </div>
                 </div>
-                <div className="contact-form"></div>
+                <div className="contact-form">
+                  <form ref={form} onSubmit={sendEmail}>
+                    <div className="row">
+                      <div className="input-wrapper">
+                        <label>Name</label>
+                        <input
+                          placeholder="What’s your name?"
+                          type="text"
+                          name="name"
+                          required
+                          onChange={(event) => setName(event.target.value)}
+                          value={Name}
+                        />
+                        <span class="input-bottom-line"></span>
+                      </div>
+                      <div className="input-wrapper">
+                        <label>Email</label>
+                        <input
+                          placeholder="What’s your email?"
+                          type="email"
+                          name="user_email"
+                          required
+                          onChange={(event) => setEmail(event.target.value)}
+                          value={Email}
+                        />
+                        <span class="input-bottom-line"></span>
+                      </div>
+                    </div>
+                    <div className="row textarea-row">
+                      <div className="input-wrapper">
+                        <label>Message</label>
+                        <textarea
+                          placeholder="What’s your message?"
+                          name="message"
+                          required
+                          onChange={(event) => setMassage(event.target.value)}
+                          value={Massage}
+                        />
+                        <span class="input-bottom-line"></span>
+                      </div>
+                    </div>
+                    <div className="submit-button">
+                      <input type="submit" value="Send message" />
+                    </div>
+                  </form>
+                </div>
               </div>
-            </section>
+            </motion.section>
           </>
           <Footer />
         </AnimateLeft>
