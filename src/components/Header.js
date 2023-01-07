@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/header.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import resume from "../images/roimalkaCV-2.pdf";
 
@@ -35,7 +35,7 @@ const Header = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.6, type: "tween" }}
     >
-      <Link activeClass="active" to="/" className="logo">
+      <NavLink to="/" className="logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="383.41"
@@ -48,7 +48,7 @@ const Header = () => {
             transform="translate(-18.585 386.476)"
           />
         </svg>
-      </Link>
+      </NavLink>
       <motion.ul
         onClick={handleClick}
         className={showMenu ? "menu active" : "menu"}
@@ -64,36 +64,37 @@ const Header = () => {
             <span className="bar"></span>
           </div>
         </div>
-        <motion.li activeClass="active" onClick={handleClick}>
-          <Link to="/">
+        <motion.li onClick={handleClick}>
+          <NavLink
+            end
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+          >
             <span>Home</span>
-          </Link>
+          </NavLink>
         </motion.li>
-        <motion.li
-          activeClass="active"
-          className="span-contact"
-          onClick={handleClick}
-        >
-          <Link to="/about">
+        <motion.li onClick={handleClick}>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+          >
             <span>About</span>
-          </Link>
+          </NavLink>
         </motion.li>
-        <motion.li
-          activeClass="active"
-          className="span-resume"
-          href={resume}
-          download
-        >
-          <span>Resume</span>
+        <motion.li className="span-resume">
+          <a href={resume} download>
+            <span>Resume</span>
+          </a>
         </motion.li>
-        <motion.li href="https://github.com/roimalka10" target="_blank">
-          <span>Github</span>
+        <motion.li>
+          <a href="https://github.com/roimalka10" target="_blank">
+            <span>Github</span>
+          </a>
         </motion.li>
-        <motion.li
-          href="https://www.linkedin.com/in/roi-malka/"
-          target="_blank"
-        >
-          <span>LinkedIn</span>
+        <motion.li>
+          <a href="https://www.linkedin.com/in/roi-malka/" target="_blank">
+            <span>LinkedIn</span>
+          </a>
         </motion.li>
         <div className="logo">
           <svg
