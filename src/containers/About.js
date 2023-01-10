@@ -56,19 +56,21 @@ const About = () => {
           </div>
           <div className="loader-text">
             <motion.h5
-              initial={{ opacity: 0, y: 0 }}
-              animate={{ opacity: 1, y: -40 }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{
-                duration: 0.35,
+                duration: 0.5,
+                delay: 0.3,
               }}
             >
               About Me
             </motion.h5>
             <motion.h1
-              initial={{ opacity: 0, y: 0 }}
-              animate={{ opacity: 1, y: -40 }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{
-                duration: 0.35,
+                duration: 0.5,
+                delay: 0.3,
               }}
             >
               Front-End Developer
@@ -215,6 +217,23 @@ const About = () => {
                       </div>
                     </div>
                     <div className="submit-button">
+                      <svg
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        width="20px"
+                        height="20px"
+                        viewBox="0 0 20 20"
+                        enable-background="new 0 0 20 20"
+                        space="preserve"
+                      >
+                        <path
+                          fill="#161e30"
+                          d="M16,17H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H16a2,2,0,0,1,2,2V15A2,2,0,0,1,16,17Zm0-2V7.619l-6,4.242L4,7.619V15H16ZM4,5V5.705l6,3.429,6-3.429V5H4Z"
+                        ></path>
+                      </svg>
                       <input type="submit" value="Send message" />
                     </div>
                   </form>

@@ -138,6 +138,7 @@
   margin-bottom: 40px;
   width: fit-content;
   padding: 0 0 4px;
+  display: flex;
 }
 
 .contact .contact-form .submit-button input {
@@ -145,7 +146,7 @@
   background: transparent;
   font-size: 90%;
   height: 100%;
-  padding: 0 0 5px;
+  padding: 0 0 5px 5px;
   font-weight: bold;
   font-family: inherit;
   color: var(--blue);
@@ -222,4 +223,81 @@
 .about-loader .bounce-icon {
   display: inline-flex;
   animation: mymove 2.4s;
+}
+
+@media (max-width: 767px) {
+  .about {
+    padding-top: 20px;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+
+  .about-text h2 {
+    margin-top: 10px;
+  }
+
+  .about-skills {
+    padding: 65px 0;
+  }
+
+  .about-skills .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-skills .wrapper > div {
+    max-width: 100%;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .about-skills .wrapper .soft-skills {
+    padding-bottom: 65px;
+  }
+
+  .about-skills .wrapper > div h3 em {
+    margin: 0 10px;
+  }
+
+  .contact {
+    padding-bottom: 20px;
+  }
+
+  .contact .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact .contact-headline {
+    width: 100%;
+  }
+
+  .contact .contact-form {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact .contact-form .row {
+    margin: 0;
+  }
+
+  .contact .contact-form .row .input-wrapper {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .contact .contact-form .row input:hover + span.input-bottom-line,
+  .contact .contact-form .row input:focus + span.input-bottom-line,
+  .contact .contact-form .row textarea:hover + span.input-bottom-line,
+  .contact .contact-form .row textarea:focus + span.input-bottom-line {
+    width: 100%;
+  }
+
+  .contact .contact-form .row span.input-bottom-line {
+    left: 0;
+  }
 }
