@@ -27,19 +27,21 @@ const HomePage = ({ projectRef }) => {
           </div>
           <div className="loader-text">
             <motion.h5
-              initial={{ opacity: 0, y: 0 }}
-              animate={{ opacity: 1, y: -40 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.35,
+                duration: 0.5,
+                delay: 0.3,
               }}
             >
               Welcome
             </motion.h5>
             <motion.h1
-              initial={{ opacity: 0, y: 0 }}
-              animate={{ opacity: 1, y: -40 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.35,
+                duration: 0.5,
+                delay: 0.3,
               }}
             >
               Home Page
