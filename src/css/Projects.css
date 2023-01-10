@@ -139,7 +139,7 @@
     height: 400px;
   }
   .projects .list .project .project-image {
-    width: 55%;
+    width: 50%;
   }
 
   .projects .list .project .project-image .image-number {
@@ -147,28 +147,18 @@
   }
 
   .projects .list .project .project-text {
-    width: 45%;
-    padding: 50px 0 0 80px;
+    padding: 10px 0 0 50px;
+    width: 50%;
   }
 
-  .projects .list .project:nth-child(even) .project-text {
-    padding: 50px 80px 0 0;
+  .projects .list .project:nth-child(2n) .project-text {
+    padding: 10px 50px 0 0;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .projects .list .project {
     height: 300px;
-  }
-}
-
-@media (max-width: 767px) {
-  .projects .list .project .project-text {
-    padding: 20px 0 0 50px;
-  }
-
-  .projects .list .project:nth-child(even) .project-text {
-    padding: 20px 50px 0 0;
   }
 }
 
