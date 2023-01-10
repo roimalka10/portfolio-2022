@@ -219,25 +219,6 @@
   }
 }
 
-/* 
-@keyframes LeftTransition {
-  0% {
-    transform: translateX(-100%);
-  }
-  35% {
-    transform: translateX(0%);
-  }
-  50% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-} */
-
 .about-loader .bounce-icon {
   display: inline-flex;
   animation: mymove 2.4s;
