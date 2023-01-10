@@ -154,7 +154,8 @@ section {
   .wrapper {
     padding: 0 20px;
   }
-  h1 {
+  h1,
+  h2 {
     font-size: 160%;
     line-height: 1.2;
     margin-top: 0;
