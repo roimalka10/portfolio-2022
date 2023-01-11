@@ -19,7 +19,7 @@ const HomePage = ({ projectRef }) => {
           animate={{ opacity: 0 }}
           transition={{
             duration: 0.5,
-            delay: 2,
+            delay: 2.2,
           }}
         >
           <div className="bounce-icon">
