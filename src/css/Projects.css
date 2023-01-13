@@ -3,6 +3,13 @@
   padding-top: 120px;
 }
 
+.projects .headline h2 {
+  line-height: 1;
+  margin-top: 15px;
+  font-size: 360%;
+  padding: 1px 0 4px;
+}
+
 .projects .list {
   margin-top: 100px;
 }
@@ -165,6 +172,12 @@
 @media (max-width: 767px) {
   .projects {
     padding-top: 80px;
+  }
+
+  .projects .headline h2 {
+    font-size: 160%;
+    line-height: 1.2;
+    margin-top: 0;
   }
 
   .projects .list {

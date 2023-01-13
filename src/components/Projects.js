@@ -21,7 +21,7 @@ const Projects = forwardRef((props, ref) => {
             }}
           >
             <h5>What's New</h5>
-            <h1>Projects</h1>
+            <h2>Projects</h2>
           </motion.div>
           <div className="list">
             {projects.map((project, index) => (
@@ -52,11 +52,7 @@ const Projects = forwardRef((props, ref) => {
                   <h2>{project.title}</h2>
                   <p>{project.about}</p>
                   <p className="stack">{project.stack}</p>
-                  <a
-                    className="project-btn"
-                    href={project.link}
-                    target="_blank"
-                  >
+                  <a className="project-btn" href={project.page}>
                     <span>Click To View Page</span>
                     <FaArrowRight size={14} className="icon-size" />
                   </a>

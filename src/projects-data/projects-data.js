@@ -20,6 +20,7 @@ export const projects = [
     about:
       "A weather app built to show state management using redux and Api usage displaying dynamic weather data.",
     link: "https://roi-malka-weather-app.netlify.app/",
+    page: "weather-app",
   },
   {
     id: 2,
