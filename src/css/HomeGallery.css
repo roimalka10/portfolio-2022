@@ -38,8 +38,7 @@
 }
 
 h3.home-text {
-  color: var(--gray);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .home-gallery .icons {
