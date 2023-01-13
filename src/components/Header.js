@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/header.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import resume from "../images/roimalkaCV-2.pdf";
 
@@ -29,12 +29,7 @@ const Header = () => {
   window.addEventListener("scroll", changeBackground);
 
   return (
-    <motion.div
-      className={header ? "header active" : "header"}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6, delay: 0.6, type: "tween" }}
-    >
+    <div className={header ? "header active" : "header"}>
       <NavLink to="/" className="logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +117,7 @@ const Header = () => {
           <span className="bar"></span>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

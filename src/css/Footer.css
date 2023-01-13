@@ -1,15 +1,10 @@
-h3.home-text {
-  color: var(--gray);
-  font-weight: 500;
-}
-
 #footer {
   width: 100%;
 }
 
 .footer-row {
   padding: 75px 0;
-  border-top: 1px solid #e7e8e9;
+  border-top: 1px solid #8a8a8a;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -53,7 +48,7 @@ footer#footer ul > li span {
   color: var(--blue);
 }
 
-h3 + p {
+footer#footer h3 + p {
   margin-top: 10px;
   font-size: 80%;
 }
