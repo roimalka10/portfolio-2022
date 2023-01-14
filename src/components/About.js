@@ -5,7 +5,6 @@ import AnimateLeft from "./Animate/AnimateLeft";
 import "../css/About.css";
 import UseLoading from "../Reusables/UseLoading";
 import emailjs from "@emailjs/browser";
-import Footer from "./Footer";
 
 const About = () => {
   const form = useRef();

@@ -48,10 +48,10 @@ const HomePage = ({ projectRef }) => {
           </div>
         </motion.div>
       ) : (
-        <>
+        <AnimateTop>
           <HomeGallery projectRef={projectRef} />
           <Projects ref={projectRef} />
-        </>
+        </AnimateTop>
       )}
     </>
   );
