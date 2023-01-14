@@ -11,6 +11,8 @@
   top: 0;
   left: 0px;
   transition: 0.6s all;
+  background: #fff;
+  border-bottom: 1px solid var(--blue);
 }
 
 .header .logo {
@@ -195,12 +197,6 @@
   color: inherit;
 }
 
-@media (max-width: 767px) {
-  .header .menu li {
-    margin: 12px 0;
-  }
-}
-
 .header .menu.active li {
   opacity: 1;
 }
@@ -279,13 +275,6 @@
   background-position: 100% 15%;
 }
 
-@media (max-width: 991px) {
-  .header .menu li:nth-child(2)::before {
-    background-size: 180%;
-    background-position: 80% 0%;
-  }
-}
-
 .header .menu li:nth-child(3)::before {
   background-image: url("../images/portfolio2.jpg");
 }
@@ -302,12 +291,6 @@
   position: relative;
   font-size: 360%;
   transition: 0.4s color;
-}
-
-@media (max-width: 767px) {
-  .header .menu li span {
-    font-size: 180%;
-  }
 }
 
 .header .menu li span::before,
@@ -336,6 +319,19 @@
   width: 100%;
 }
 
+@media (max-width: 1600px) {
+  .header {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header .menu li:nth-child(2)::before {
+    background-size: 180%;
+    background-position: 80% 0%;
+  }
+}
+
 @media (min-width: 768px) {
   .header .menu li span:hover:before,
   .header .menu li span:hover:after,
@@ -350,12 +346,15 @@
     padding: 20px;
     position: sticky;
   }
+
   .header.active {
-    background: rgb(255 255 255 / 80%);
+    background: rgb(255 255 255 / 90%);
   }
+
   .header .hamburger > span {
     display: none;
   }
+
   .header .logo {
     max-width: 60px;
   }
@@ -368,5 +367,13 @@
   .header .menu .logo {
     top: 22px;
     left: 20px;
+  }
+
+  .header .menu li span {
+    font-size: 180%;
+  }
+
+  .header .menu li {
+    margin: 12px 0;
   }
 }

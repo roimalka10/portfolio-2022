@@ -257,9 +257,40 @@
   transition: 0.4s all;
 }
 
+@media (max-width: 1600px) and (min-width: 1024px) {
+  .about {
+    padding-top: 160px;
+  }
+
+  .about-text h2 {
+    font-size: 180%;
+    max-width: 900px;
+  }
+
+  .about-skills {
+    padding: 100px 0;
+  }
+
+  .contact {
+    padding-bottom: 75px;
+  }
+
+  .about-text h3 {
+    font-size: 100%;
+  }
+
+  .about-skills .wrapper > div h3 {
+    font-size: 100%;
+  }
+
+  .contact .contact-headline h2 {
+    font-size: 180%;
+  }
+}
+
 @media (max-width: 767px) {
   .about {
-    padding-top: 20px;
+    padding-top: 40px;
   }
 
   .about-text {

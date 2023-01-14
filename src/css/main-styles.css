@@ -194,9 +194,8 @@ section {
 @media (max-width: 1024px) {
 }
 
-@media (max-width: 767px) {
-  .wrapper,
-  .container {
+@media (max-width: 620px) {
+  .wrapper {
     padding: 0 20px;
   }
   h1,
@@ -210,6 +209,10 @@ section {
     font-size: 90%;
     line-height: 1.4;
     margin-top: 10px;
+  }
+  p,
+  li {
+    font-size: 95%;
   }
 }
 

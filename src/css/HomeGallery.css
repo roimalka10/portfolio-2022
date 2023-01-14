@@ -123,10 +123,40 @@ h3.home-text {
     transform: translateY(14px);
   }
 }
+
+@media (max-width: 991px) and (min-width: 620px) {
+  .home-gallery .wrapper .home-row .home-main h1 {
+    font-size: 200%;
+  }
+
+  .home-gallery .wrapper .home-row .home-main {
+    max-width: 420px;
+  }
+
+  .home-gallery .wrapper {
+    bottom: 0;
+  }
+
+  .home-gallery .name-logo {
+    left: 65%;
+    top: 55%;
+  }
+
+  .home-gallery .name-logo svg {
+    width: 320px;
+  }
+}
+
 @media (max-width: 767px) {
+  section.home-gallery {
+    height: calc(var(--app-height) - 84px);
+  }
+}
+
+@media (max-width: 620px) {
   .home-gallery .name-logo {
     top: 28%;
-    width: 92%;
+    width: 90%;
   }
 
   .home-gallery .name-logo svg {
@@ -153,11 +183,6 @@ h3.home-text {
   }
   .home-gallery .scroll-to {
     display: none;
-  }
-}
-@media (max-width: 767px) {
-  section.home-gallery {
-    height: calc(var(--app-height) - 84px);
   }
 }
 
