@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../css/Project-page.css";
 import OtherProjects from "../components/OtherProjects";
 import { Paths } from "../constants";
@@ -7,29 +7,43 @@ import weatherNew from "../images/weathernew.png";
 import weatherLogoNew from "../images/weather-logo-new.svg";
 
 const WeatherApp = (props) => {
+  const constraintsRef = useRef(null);
   const imgAlt = "weather app";
 
   return (
-    <section id="weather-app" className="project-page">
+    <section id="weather-app">
       <motion.div
         className="main-img"
         initial={{ y: "-100%" }}
         animate={{ y: 0 }}
         transition={{
           duration: 1.2,
-          delay: 0.6,
+          delay: 0.8,
           type: "spring",
-          bounce: 0.25,
+          bounce: 0.3,
         }}
+        ref={constraintsRef}
       >
-        <img src={weatherLogoNew} alt={imgAlt} />
+        <div>
+          <motion.img
+            drag
+            dragTransition={{ bounceStiffness: 40, bounceDamping: 5 }}
+            dragMomentum={false}
+            dragElastic={0.5}
+            dragSnapToOrigin={true}
+            dragConstraints={constraintsRef}
+            src={weatherLogoNew}
+            alt={imgAlt}
+          />
+          <span>Drag the image to have fun</span>
+        </div>
       </motion.div>
       <motion.div
         className="container"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8 }}
         variants={{
           visible: { opacity: 1, y: 0 },
           hidden: { opacity: 0, y: 50 },
@@ -81,7 +95,7 @@ const WeatherApp = (props) => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8 }}
         variants={{
           visible: { opacity: 1, y: 0 },
           hidden: { opacity: 0, y: 50 },
@@ -130,7 +144,7 @@ const WeatherApp = (props) => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8 }}
         variants={{
           visible: { opacity: 1, y: 0 },
           hidden: { opacity: 0, y: 50 },
