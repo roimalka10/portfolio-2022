@@ -8,6 +8,25 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [header, setHeader] = useState(false);
 
+  const animations = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: 2,
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   const handleClick = () => {
     setShowMenu(!showMenu);
   };
@@ -29,7 +48,13 @@ const Header = () => {
   window.addEventListener("scroll", changeBackground);
 
   return (
-    <div className={header ? "header active" : "header"}>
+    <motion.div
+      className={header ? "header active" : "header"}
+      variants={animations}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <NavLink to="/" className="logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +142,7 @@ const Header = () => {
           <span className="bar"></span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
