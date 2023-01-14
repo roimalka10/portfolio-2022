@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div className="App">
       <ContactButton />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         <ScrollToTopRoute />
         <Routes key={location.pathname} location={location}>
           <Route path="" element={<ContentTemplate />}>
