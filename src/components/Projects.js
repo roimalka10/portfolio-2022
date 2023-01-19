@@ -53,7 +53,7 @@ const Projects = forwardRef((props, ref) => {
                   <p>{project.about}</p>
                   <p className="stack">{project.stack}</p>
                   <a className="project-btn" href={project.page}>
-                    <span>Click To View Page</span>
+                    <span>Click To View Project Page</span>
                     <FaArrowRight size={14} className="icon-size" />
                   </a>
                 </div>

@@ -59,6 +59,10 @@
   object-position: center 50%;
 }
 
+.projects .list .project2 .project-image .project-image-container img {
+  object-position: 25% 50%;
+}
+
 .projects .list .project6 .project-image .project-image-container img {
   object-position: center 80%;
 }
@@ -107,12 +111,14 @@
   color: inherit;
   top: 10px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 10px;
 }
 
 .projects .list .project .project-text .project-btn span {
-  text-decoration: underline;
+  border-bottom: 1px solid;
+  width: fit-content;
+  line-height: 1.1;
 }
 
 .projects .list .project .project-image .image-number {

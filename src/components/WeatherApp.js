@@ -4,14 +4,21 @@ import OtherProjects from "../components/OtherProjects";
 import { Paths } from "../constants";
 import { motion } from "framer-motion";
 import weatherNew from "../images/weathernew.png";
+import weatherNewImg from "../images/Screenshot_1.png";
+import weatherFav from "../images/weather-fav.png";
 import weatherLogoNew from "../images/weather-logo-new.svg";
+import { FaArrowRight } from "react-icons/fa";
+import UseScroll from "../Reusables/UseScroll";
 
 const WeatherApp = (props) => {
   const constraintsRef = useRef(null);
+  const [scrollYProgress, scaleX] = UseScroll();
+
   const imgAlt = "weather app";
 
   return (
     <section id="weather-app">
+      <motion.div className="progress-bar" style={{ scaleX }} />
       <motion.div
         className="main-img"
         initial={{ y: "-100%" }}
@@ -52,7 +59,10 @@ const WeatherApp = (props) => {
         <div className="summery-text-container">
           <div className="titles">
             <h1>Weather App </h1>
-            <h4>weather forecast site</h4>
+            <a href="https://roi-malka-weather-app.netlify.app/">
+              <span>Click To View Site</span>
+              <FaArrowRight size={14} className="icon-size" />
+            </a>
           </div>
           <div className="text-block">
             <h3>TL;DR</h3>
@@ -88,7 +98,7 @@ const WeatherApp = (props) => {
             </p>
           </div>
         </div>
-        <img src={weatherNew} className="margin-top" alt={imgAlt} />
+        <img src={weatherNewImg} className="margin-top" alt={imgAlt} />
       </motion.div>
       <motion.div
         className="container"
@@ -103,40 +113,15 @@ const WeatherApp = (props) => {
       >
         <h3 className="text-with-margin">Problem</h3>
         <p className="text-container-4">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis,
-          voluptas pariatur! Eligendi adipisci maiores aut recusandae
+          When I applied to the job and got the test, I had zero knowledge about
+          redux and managing state on the front end.
+          <br />
+          Whilst only having a week to finish the test, I got ill in the middle
+          of it, which did not help studying and finishing the test at all.
+          <br />
+          While learning about redux and state management I saw more problems
+          and errors than any other project or assignment I've ever had.
         </p>
-        <ul className="margin-down text-container-4">
-          <li>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Blanditiis, voluptas pariatur! Eligendi adipisci maiores aut
-          </li>
-          <li>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Blanditiis, voluptas
-          </li>
-        </ul>
-        <p className="text-container-4">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis,
-          voluptas pariatur! Eligendi adipisci maiores aut recusandae voluptate
-          ipsum numquam quia? Totam quisquam blanditiis, voluptatem ipsa quas
-          repellat eos. Ullam, consequuntur! Lorem ipsum, dolor sit amet
-          consectetur
-        </p>
-        <p>This led to two main pain points:</p>
-        <ul className="text-container-4">
-          <li>
-            <span className="bold-text">On the user end:</span> Lorem ipsum
-            dolor, sit amet consectetur adipisicing elit. Blanditiis, voluptas
-            pariatur! Eligendi adipisci maiores aut recusandae voluptate ipsum
-            numquam quia?
-          </li>
-          <li>
-            <span className="bold-text">On the business end:</span> Lorem ipsum
-            dolor, sit amet consectetur adipisicing elit. Blanditiis, voluptas
-            pariatur! Eligendi adipisci maiores
-          </li>
-        </ul>
       </motion.div>
       <div className="content-divider" />
       <motion.div
@@ -152,23 +137,18 @@ const WeatherApp = (props) => {
       >
         <h3 className="text-with-margin">Approach - intense Learning</h3>
         <p className="text-container-4">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis,
-          voluptas pariatur! Eligendi adipisci maiores aut recusandae voluptate
-          ipsum numquam quia? Totam quisquam blanditiis, voluptatem ipsa quas
-          repellat eos. Ullam, consequuntur! Lorem ipsum, dolor sit amet
-          consectetur
+          Against all odds I set down for probably 10-13 hours every single day,
+          managing to finish the test, using stuff like Redux and state
+          management, utilizing different api requests, using postman to check
+          them plus doing basic error handling.
         </p>
 
-        <img src={weatherNew} className=" margin-both" alt={imgAlt} />
+        <img src={weatherFav} className=" margin-both" alt={imgAlt} />
         <h3 className="text-with-margin">Result</h3>
         <p className="text-container-4">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis,
-          voluptas pariatur! Eligendi adipisci maiores aut recusandae voluptate
-          ipsum numquam quia? Totam quisquam blanditiis, voluptatem ipsa quas
-          repellat eos. Ullam, consequuntur! Lorem ipsum, dolor sit amet
-          consectetur adipisicing elit. Minima dolor adipisci quo voluptas velit
-          eos voluptate nemo amet impedit odit perferendis sed asperiores quasi
-          quas facilis itaque id, ullam nobis!
+          Even though I didn't get the job in the end, <br /> I learned so much
+          from the test, which shows you can achieve cetain goals even if you're
+          not going in the direction you thought you need to.
         </p>
       </motion.div>
       <div className="content-divider full-width" />
