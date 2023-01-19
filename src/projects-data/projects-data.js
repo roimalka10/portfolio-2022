@@ -1,10 +1,9 @@
 import portfolio from "../images/portfolio1.jpg";
-import progress from "../images/workinprogress.jpg";
 import tesla from "../images/tesla.jpg";
 import teslaNew from "../images/tesla-image.jpg";
 import weather from "../images/weatherapp.jpg";
 import weatherNew from "../images/weathernew.png";
-import wildfire from "../images/wildfire.jpg";
+import weatherNewImg from "../images/Screenshot_1.png";
 import portfolio2022 from "../images/portfolio2022.jpg";
 import portfolio2022New from "../images/portfolio2022New.jpg";
 import calculator from "../images/calculator.jpg";
@@ -14,8 +13,9 @@ import tabletport2021 from "../images/tabletport2021.jpg";
 export const projects = [
   {
     id: 1,
+    cssId: "weather-app",
     title: "Weather App",
-    img: weatherNew,
+    img: weatherNewImg,
     stack: "React / Redux / Accuweather API / Sass",
     about:
       "A weather app built to show state management using redux and Api usage displaying dynamic weather data.",
@@ -25,7 +25,7 @@ export const projects = [
   {
     id: 2,
     title: "Portfolio - 2022",
-    img: portfolio2022,
+    img: portfolio2022New,
     stack: "React / CSS / Axios / Framer Motion",
     about:
       "New and improved version of my portfolio, showing better design, code and UI/UX skills.",
@@ -56,6 +56,7 @@ export const projects = [
     about:
       "My personal portfolio created in 2021 to showcase my projects and skills.",
     link: "https://roimalkaportfolio-2021.netlify.app/",
+    page: "portfolio-2021",
   },
   {
     id: 5,
@@ -64,6 +65,7 @@ export const projects = [
     stack: "React / Styled Components",
     about: "A tesla home page clone showing Styled Components usage.",
     link: "https://tesla-clone-roimalka.netlify.app",
+    page: "tesla-clone",
   },
   {
     id: 6,
