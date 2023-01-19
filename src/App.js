@@ -10,10 +10,12 @@ import ProjectsTemplate from "./containers/ProjectsTemplate";
 import ContentTemplate from "./containers/ContentTemplate";
 import About from "./components/About";
 import WeatherApp from "./components/WeatherApp";
+import Portfolio2021 from "./components/Portfolio2021";
 import { Route, Routes, useLocation } from "react-router";
 import { Paths } from "./constants";
 import { getSubPath, getRootPath } from "./utils";
 import ScrollToTopRoute from "./Reusables/ScrollToTopRoute";
+import TeslaPage from "./components/TeslaPage";
 
 const App = () => {
   const location = useLocation();
@@ -47,6 +49,14 @@ const App = () => {
             <Route
               path={getSubPath(Paths.WEATHER)}
               element={<WeatherApp projectRef={projectRef} exact />}
+            />
+            <Route
+              path={getSubPath(Paths.PORTFOLIO2021)}
+              element={<Portfolio2021 projectRef={projectRef} exact />}
+            />
+            <Route
+              path={getSubPath(Paths.TESLA)}
+              element={<TeslaPage projectRef={projectRef} exact />}
             />
           </Route>
         </Routes>
