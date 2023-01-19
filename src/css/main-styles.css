@@ -3,6 +3,9 @@
 :root {
   --blue: #161e30;
   --gray: #878a8f;
+  --weather-bg: #7abaf1c2;
+  --port2021: #161616;
+  --tesla: #e91b22;
 }
 
 #root {
