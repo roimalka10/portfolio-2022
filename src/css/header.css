@@ -7,6 +7,7 @@
   padding: 30px 40px;
   z-index: 1000;
   position: fixed;
+  position: sticky;
   pointer-events: none;
   top: 0;
   left: 0px;
@@ -344,11 +345,6 @@
 @media (max-width: 767px) {
   .header {
     padding: 20px;
-    position: sticky;
-  }
-
-  .header.active {
-    background: rgb(255 255 255 / 90%);
   }
 
   .header .hamburger > span {

@@ -1,5 +1,5 @@
 .home-gallery {
-  height: 100vh;
+  height: calc(var(--app-height) - 128px);
 }
 
 .home-gallery .name-logo {
