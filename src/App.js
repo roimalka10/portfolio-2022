@@ -20,11 +20,22 @@ import TeslaPage from "./components/TeslaPage";
 const App = () => {
   const location = useLocation();
   window.addEventListener("resize", appHeight);
+  var doc = document.documentElement;
 
   var appHeight = function () {
-    var doc = document.documentElement;
     doc.style.setProperty("--app-height", "".concat(window.innerHeight, "px"));
   };
+
+  var currentUserAgent = navigator.userAgent;
+  if (currentUserAgent.includes("Chrome")) {
+    doc.classList.add("chromeBrowser");
+  } else if (currentUserAgent.includes("Safari")) {
+    doc.classList.add("safariBrowser");
+  } else if (currentUserAgent.includes("SamsungBrowser")) {
+    doc.classList.add("SamsungBrowser");
+  } else if (/iPad|iPhone|iPod/.test(currentUserAgent)) {
+    doc.classList.add("iphoneBrowser");
+  }
 
   appHeight();
   const projectRef = useRef(null);
