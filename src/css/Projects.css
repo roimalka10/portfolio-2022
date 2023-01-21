@@ -229,7 +229,11 @@
 
   .projects .list .project-image .project-image-container img {
     transform: scale(1.03);
-    height: 300px;
+    height: 260px;
+  }
+
+  .projects .list .project2 .project-image .project-image-container img {
+    object-position: 18% 50%;
   }
 
   .projects .list .project .project-image .image-number {

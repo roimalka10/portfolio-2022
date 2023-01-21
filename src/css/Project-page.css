@@ -24,9 +24,9 @@
   opacity: 1 !important;
 }
 
-.project-page > section {
+/* .project-page > section {
   margin-top: 98px;
-}
+} */
 
 .container {
   width: 100%;
@@ -88,9 +88,13 @@
 }
 
 .project-page .main-img > div {
-  height: 93%;
+  height: 100%;
   max-width: 400px;
   display: inline-flex;
+}
+
+.project-page #tesla .main-img > div {
+  height: 90%;
 }
 
 .project-page .main-img > div span {
@@ -186,7 +190,6 @@
   font-size: 100%;
   text-decoration: none;
   color: inherit;
-  top: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -347,8 +350,13 @@
   }
 
   .project-page .main-img {
-    height: 250px;
+    height: 230px;
     padding-top: 0;
+  }
+
+  .project-page #tesla .main-img > div,
+  .project-page #portfolio2021 .main-img > div {
+    max-width: 200px;
   }
 
   .summery-text-container {
@@ -362,6 +370,10 @@
     line-height: 1.1;
     margin: 0 0 10px;
     font-size: 180%;
+  }
+
+  .summery-text-container .titles > a {
+    font-size: 90%;
   }
 
   .summery-text-container .text-block h3 {
