@@ -12,7 +12,7 @@
   top: 0;
   left: 0px;
   transition: 0.6s all;
-  background: #fff;
+  background: var(--white);
   border-bottom: 1px solid var(--blue);
 }
 
@@ -39,7 +39,7 @@
 }
 
 .header .menu .logo svg {
-  fill: #fff;
+  fill: var(--white);
   opacity: 0.35;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .header .menu .hamburger:hover > span {
-  color: #fff;
+  color: var(--white);
 }
 
 .header .hamburger > span {
@@ -133,7 +133,7 @@
 }
 
 .header .menu.active .hamburger.open:hover .bar {
-  background: #fff;
+  background: var(--white);
 }
 
 /* Header Menu */
@@ -285,7 +285,7 @@
   filter: blur(3px);
 }
 .header .menu li:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 .header .menu li span {
@@ -308,12 +308,12 @@
 }
 
 .header .menu li span::after {
-  background-color: #fff;
+  background-color: var(--white);
   transition: all 0.35s cubic-bezier(0.694, 0.048, 0.335, 1);
 }
 
 .header .menu li > a.active {
-  color: #fff;
+  color: var(--white);
 }
 
 .header .menu li > a.active span::after {

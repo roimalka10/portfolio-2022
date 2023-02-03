@@ -1,9 +1,9 @@
 .home-gallery {
-  height: calc(var(--app-height) - 128px);
+  height: calc(var(--app-height) - 108px);
 }
 
 .home-gallery .name-logo {
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   left: 50%;
   top: 50%;

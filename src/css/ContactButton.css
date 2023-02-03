@@ -29,6 +29,10 @@
   margin-right: 8px;
 }
 
+.contact-link svg path {
+  fill: var(--white);
+}
+
 .contact-link span {
   display: block;
   width: 0;

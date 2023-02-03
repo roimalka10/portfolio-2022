@@ -62,12 +62,20 @@
   align-items: flex-end;
 }
 
+.dark .project-page .main-img {
+  border-bottom: solid 1px var(--blue);
+}
+
 .project-page #weather-app .main-img {
   background: var(--weather-bg);
 }
 
 .project-page #portfolio2021 .main-img {
-  background: var(--port2021);
+  background: #000;
+}
+
+.dark .project-page #portfolio2021 .main-img {
+  background: var(--white);
 }
 
 #tesla .main-img::before {
@@ -239,6 +247,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.4s ease-in-out;
+}
+
+.dark .another-project-btn-section .btn {
+  background-image: linear-gradient(to right, #878a8f, #878a8f 50%, #fff 50%);
 }
 
 .another-project-btn-section .btn:hover {
