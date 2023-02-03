@@ -1,11 +1,29 @@
 @import url("../fonts/style.css");
 
 :root {
-  --blue: #161e30;
-  --gray: #878a8f;
+  --whiteColor: #fff;
+  --blueColor: #161e30;
+  --grayColor: #878a8f;
+  --blackColor: #01030e;
   --weather-bg: #7abaf1c2;
   --port2021: #161616;
   --tesla: #e91b22;
+}
+
+.light {
+  --white: var(--whiteColor);
+  --blue: var(--blueColor);
+  --gray: var(--grayColor);
+  --loaderText: var(--grayColor);
+  background-color: var(--white);
+}
+
+.dark {
+  --white: var(--blackColor);
+  --blue: var(--whiteColor);
+  --gray: var(--grayColor);
+  --loaderText: var(--blackColor);
+  background-color: var(--white);
 }
 
 #root {
@@ -15,8 +33,8 @@
 }
 
 .App {
-  transition: none;
   min-height: var(--app-height);
+  cursor: none;
 }
 
 * {
@@ -33,6 +51,43 @@ body {
   font-family: "Helvetica Now Display", sans-serif;
 }
 
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(22, 30, 48, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+  will-change: width, height, transform, border, mix-blend-mode;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.dot {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: var(--blue);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.ring.hovered {
+  width: 60px;
+  height: 60px;
+}
+
+.dot.hovered {
+  background-color: #161e3061;
+}
 p,
 li {
   color: var(--blue);
@@ -158,18 +213,25 @@ nav.links h4:hover::before {
 }
 
 nav.links a.btn {
-  background-image: linear-gradient(
-    to right,
-    #878a8f,
-    #878a8f 50%,
-    #161e30 50%
-  );
   background-size: 200% 100%;
   background-position: 100%;
   display: inline-block;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.4s ease-in-out;
+}
+
+.light nav.links a.btn {
+  background-image: linear-gradient(
+    to right,
+    #878a8f,
+    #878a8f 50%,
+    #161e30 50%
+  );
+}
+
+.dark nav.links a.btn {
+  background-image: linear-gradient(to right, #878a8f, #878a8f 50%, #fff 50%);
 }
 
 nav.links h4:hover a.btn {

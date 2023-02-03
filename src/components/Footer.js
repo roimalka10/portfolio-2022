@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../css/Footer.css";
+import { MouseContext } from ".././context/MouseContext";
 
 const Footer = () => {
+  const { cursorChangeHandler } = useContext(MouseContext);
+
   return (
     <footer id="footer">
       <div className="wrapper">
@@ -19,7 +22,12 @@ const Footer = () => {
             <ul>
               <li>
                 Email:
-                <a className="special" href="mailto:roimalka10@gmail.com">
+                <a
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                  className="special"
+                  href="mailto:roimalka10@gmail.com"
+                >
                   roimalka10@gmail.com
                 </a>
               </li>
@@ -51,7 +59,10 @@ const Footer = () => {
               projects —
             </h3>
             <ul className="projects-links">
-              <li>
+              <li
+                onMouseEnter={() => cursorChangeHandler("hovered")}
+                onMouseLeave={() => cursorChangeHandler("")}
+              >
                 <a
                   className="special"
                   href="https://roi-malka-weather-app.netlify.app/"
@@ -60,7 +71,10 @@ const Footer = () => {
                   Weather app
                 </a>
               </li>
-              <li>
+              <li
+                onMouseEnter={() => cursorChangeHandler("hovered")}
+                onMouseLeave={() => cursorChangeHandler("")}
+              >
                 <a
                   className="special"
                   href="https://roimalkaportfolio-2021.netlify.app/"
@@ -69,7 +83,10 @@ const Footer = () => {
                   Portfolio 2021
                 </a>
               </li>
-              <li>
+              <li
+                onMouseEnter={() => cursorChangeHandler("hovered")}
+                onMouseLeave={() => cursorChangeHandler("")}
+              >
                 <a
                   className="special"
                   href="https://tesla-clone-roimalka.netlify.app"
@@ -78,7 +95,10 @@ const Footer = () => {
                   Tesla clone
                 </a>
               </li>
-              <li>
+              <li
+                onMouseEnter={() => cursorChangeHandler("hovered")}
+                onMouseLeave={() => cursorChangeHandler("")}
+              >
                 <a
                   className="special"
                   href="https://roimalka-calculator.netlify.app/"
@@ -87,7 +107,10 @@ const Footer = () => {
                   Calculator
                 </a>
               </li>
-              <li>
+              <li
+                onMouseEnter={() => cursorChangeHandler("hovered")}
+                onMouseLeave={() => cursorChangeHandler("")}
+              >
                 <a
                   className="special"
                   href="https://github.com/roimalka10/Fitness-website"

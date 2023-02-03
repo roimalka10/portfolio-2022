@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../css/HomeGallery.css";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
+import { MouseContext } from ".././context/MouseContext";
 
 const HomeGallery = ({ projectRef }) => {
   const ProjectsClick = () => {
     projectRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const { cursorChangeHandler } = useContext(MouseContext);
 
   return (
     <>
@@ -66,6 +69,7 @@ const HomeGallery = ({ projectRef }) => {
                   delay: 1.3,
                 }}
               >
+                {" "}
                 A Front-End developer with industry experience building websites
                 and web pages. Pixel Perfect Precision and a can-do approach is
                 what I always try to achieve.
@@ -79,13 +83,21 @@ const HomeGallery = ({ projectRef }) => {
                   delay: 1.6,
                 }}
               >
-                <motion.h4 className="links-btn">
+                <motion.h4
+                  className="links-btn"
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
                   <Link className="btn" onClick={ProjectsClick}>
                     View Projects
                   </Link>
                 </motion.h4>
                 <span>or</span>
-                <motion.h4 className="links-btn">
+                <motion.h4
+                  className="links-btn"
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
                   <NavLink className="btn" to="/about">
                     Read About Me
                   </NavLink>
@@ -93,7 +105,10 @@ const HomeGallery = ({ projectRef }) => {
               </motion.nav>
             </div>
           </div>
-          <Link>
+          <Link
+            onMouseEnter={() => cursorChangeHandler("hovered")}
+            onMouseLeave={() => cursorChangeHandler("")}
+          >
             <motion.a
               onClick={ProjectsClick}
               className="scroll-to"
@@ -117,12 +132,18 @@ const HomeGallery = ({ projectRef }) => {
             delay: 0.5,
           }}
         >
-          <li>
+          <li
+            onMouseEnter={() => cursorChangeHandler("hovered")}
+            onMouseLeave={() => cursorChangeHandler("")}
+          >
             <a href="https://github.com/roimalka10" target="_blank">
               <FaGithub size={50} className="icon-size" />
             </a>
           </li>
-          <li>
+          <li
+            onMouseEnter={() => cursorChangeHandler("hovered")}
+            onMouseLeave={() => cursorChangeHandler("")}
+          >
             <a href="https://www.linkedin.com/in/roi-malka/" target="_blank">
               <FaLinkedinIn size={50} className="icon-size" />
             </a>

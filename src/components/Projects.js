@@ -1,10 +1,13 @@
-import React, { useRef, forwardRef } from "react";
+import React, { useRef, forwardRef, useContext } from "react";
 import "../css/Projects.css";
 import { projects } from "../projects-data/projects-data";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { MouseContext } from ".././context/MouseContext";
 
 const Projects = forwardRef((props, ref) => {
+  const { cursorChangeHandler } = useContext(MouseContext);
+
   return (
     <>
       <section className="projects" ref={ref}>
@@ -30,7 +33,7 @@ const Projects = forwardRef((props, ref) => {
                 className={`project project${index + 1}`}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.35 }}
+                viewport={{ amount: 0.35 }}
                 transition={{ duration: 0.8 }}
                 variants={{
                   visible: { opacity: 1, y: 0 },
@@ -52,7 +55,12 @@ const Projects = forwardRef((props, ref) => {
                   <h2>{project.title}</h2>
                   <p>{project.about}</p>
                   <p className="stack">{project.stack}</p>
-                  <a className="project-btn" href={project.page}>
+                  <a
+                    onMouseEnter={() => cursorChangeHandler("hovered")}
+                    onMouseLeave={() => cursorChangeHandler("")}
+                    className="project-btn"
+                    href={project.page}
+                  >
                     <span>Click To View Project Page</span>
                     <FaArrowRight size={14} className="icon-size" />
                   </a>

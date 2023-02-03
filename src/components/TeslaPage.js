@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import "../css/Project-page.css";
 import OtherProjects from "../components/OtherProjects";
 import { Paths } from "../constants";
@@ -9,10 +9,12 @@ import roadbg from "../images/forest-road.jpg";
 import teslacar2 from "../images/teslacar2.webp";
 import { FaArrowRight } from "react-icons/fa";
 import UseScroll from "../Reusables/UseScroll";
+import { MouseContext } from ".././context/MouseContext";
 
 const TeslaPage = (props) => {
   const constraintsRef = useRef(null);
   const [scrollYProgress, scaleX] = UseScroll();
+  const { cursorChangeHandler } = useContext(MouseContext);
 
   const imgAlt = "tesla copy";
 
@@ -65,7 +67,11 @@ const TeslaPage = (props) => {
         <div className="summery-text-container">
           <div className="titles">
             <h1>Tesla Clone </h1>
-            <a href="https://tesla-clone-roimalka.netlify.app/">
+            <a
+              onMouseEnter={() => cursorChangeHandler("hovered")}
+              onMouseLeave={() => cursorChangeHandler("")}
+              href="https://tesla-clone-roimalka.netlify.app/"
+            >
               <span>Click To View Site</span>
               <FaArrowRight size={14} className="icon-size" />
             </a>

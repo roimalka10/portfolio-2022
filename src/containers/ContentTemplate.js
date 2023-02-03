@@ -11,13 +11,27 @@ const animations = {
   },
 };
 
+var body = document.body,
+  html = document.documentElement;
+
+var height =
+  Math.max(
+    body.scrollHeight,
+    body.offsetHeight,
+    html.clientHeight,
+    html.scrollHeight,
+    html.offsetHeight
+  ) * 5;
+
 const ContentTemplate = ({ projectRef }) => {
   const [pageHeight] = PageHeight();
 
   return (
     <motion.div
       className="content-page"
-      style={{ minHeight: pageHeight ? "200vh" : "unset" }}
+      style={{
+        minHeight: pageHeight ? height : "unset",
+      }}
       variants={animations}
       exit="exit"
       transition={{ duration: 0.5 }}

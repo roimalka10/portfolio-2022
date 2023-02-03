@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import "../css/Project-page.css";
 import OtherProjects from "../components/OtherProjects";
 import { Paths } from "../constants";
@@ -9,10 +9,12 @@ import weatherFav from "../images/weather-fav.png";
 import weatherLogoNew from "../images/weather-logo-new.svg";
 import { FaArrowRight } from "react-icons/fa";
 import UseScroll from "../Reusables/UseScroll";
+import { MouseContext } from ".././context/MouseContext";
 
 const WeatherApp = (props) => {
   const constraintsRef = useRef(null);
   const [scrollYProgress, scaleX] = UseScroll();
+  const { cursorChangeHandler } = useContext(MouseContext);
 
   const imgAlt = "weather app";
 
@@ -59,7 +61,11 @@ const WeatherApp = (props) => {
         <div className="summery-text-container">
           <div className="titles">
             <h1>Weather App </h1>
-            <a href="https://roi-malka-weather-app.netlify.app/">
+            <a
+              onMouseEnter={() => cursorChangeHandler("hovered")}
+              onMouseLeave={() => cursorChangeHandler("")}
+              href="https://roi-malka-weather-app.netlify.app/"
+            >
               <span>Click To View Site</span>
               <FaArrowRight size={14} className="icon-size" />
             </a>

@@ -1,10 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { motion } from "framer-motion";
 import { BounceLoader } from "react-spinners";
 import AnimateLeft from "./Animate/AnimateLeft";
 import "../css/About.css";
 import UseLoading from "../Reusables/UseLoading";
 import emailjs from "@emailjs/browser";
+import { MouseContext } from ".././context/MouseContext";
 
 const About = () => {
   const form = useRef();
@@ -12,6 +13,7 @@ const About = () => {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Massage, setMassage] = useState("");
+  const { cursorChangeHandler } = useContext(MouseContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -215,7 +217,11 @@ const About = () => {
                         <span class="input-bottom-line"></span>
                       </div>
                     </div>
-                    <div className="submit-button">
+                    <div
+                      onMouseEnter={() => cursorChangeHandler("hovered")}
+                      onMouseLeave={() => cursorChangeHandler("")}
+                      className="submit-button"
+                    >
                       <input type="submit" value="Send message" />
                     </div>
                   </form>

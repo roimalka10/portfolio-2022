@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import "../css/Project-page.css";
 import OtherProjects from "../components/OtherProjects";
 import { Paths } from "../constants";
@@ -8,10 +8,12 @@ import portfolio2 from "../images/portfolio2.jpg";
 import portfolio2021Logo from "../images/porfoliologo2021.png";
 import { FaArrowRight } from "react-icons/fa";
 import UseScroll from "../Reusables/UseScroll";
+import { MouseContext } from ".././context/MouseContext";
 
 const Portfolio2021 = (props) => {
   const constraintsRef = useRef(null);
   const [scrollYProgress, scaleX] = UseScroll();
+  const { cursorChangeHandler } = useContext(MouseContext);
 
   const imgAlt = "portfolio app";
 
@@ -58,7 +60,11 @@ const Portfolio2021 = (props) => {
         <div className="summery-text-container">
           <div className="titles">
             <h1>Portfolio - 2021 </h1>
-            <a href="https://roimalkaportfolio-2021.netlify.app/">
+            <a
+              onMouseEnter={() => cursorChangeHandler("hovered")}
+              onMouseLeave={() => cursorChangeHandler("")}
+              href="https://roimalkaportfolio-2021.netlify.app/"
+            >
               <span>Click To View Site</span>
               <FaArrowRight size={14} className="icon-size" />
             </a>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./css/main-styles.css";
 import "./css/UpButton.css";
 import ContactButton from "./components/ContactButton";
@@ -16,6 +16,7 @@ import { Paths } from "./constants";
 import { getSubPath, getRootPath } from "./utils";
 import ScrollToTopRoute from "./Reusables/ScrollToTopRoute";
 import TeslaPage from "./components/TeslaPage";
+import Cursor from "./components/CursorFeatures/Cursor";
 
 const App = () => {
   const location = useLocation();
@@ -41,7 +42,8 @@ const App = () => {
   const projectRef = useRef(null);
 
   return (
-    <div className="App">
+    <div className="App light">
+      <Cursor />
       <ContactButton />
       <AnimatePresence mode="wait">
         <ScrollToTopRoute />

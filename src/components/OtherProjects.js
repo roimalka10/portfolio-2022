@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Paths } from "../constants";
 import { getSubPath } from "../utils";
 import { motion } from "framer-motion";
+import { MouseContext } from ".././context/MouseContext";
 
 const OtherProjects = (props) => {
   const { exclude } = props;
@@ -11,6 +12,8 @@ const OtherProjects = (props) => {
     Paths.PORTFOLIO2021,
     Paths.TESLA,
   ].filter((project) => project !== exclude);
+
+  const { cursorChangeHandler } = useContext(MouseContext);
 
   return (
     <motion.div
@@ -30,7 +33,11 @@ const OtherProjects = (props) => {
           <br />
           stick around and look at some other stuff I created.
         </p>
-        <div className="btn-container">
+        <div
+          onMouseEnter={() => cursorChangeHandler("hovered")}
+          onMouseLeave={() => cursorChangeHandler("")}
+          className="btn-container"
+        >
           {projects.map((project) => getProjectLink(project))}
         </div>
       </div>
