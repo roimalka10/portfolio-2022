@@ -126,7 +126,7 @@
   transition: 0.6s;
 }
 
-.dark .contact .contact-form .row span.input-bottom-line {
+#dark .contact .contact-form .row span.input-bottom-line {
   background: var(--grayColor);
 }
 
@@ -160,7 +160,7 @@
   transition: all 0.4s ease-in-out;
 }
 
-.light .contact .contact-form .submit-button input {
+#light .contact .contact-form .submit-button input {
   background-image: linear-gradient(
     to right,
     #878a8f,
@@ -169,7 +169,7 @@
   );
 }
 
-.dark .contact .contact-form .submit-button input {
+#dark .contact .contact-form .submit-button input {
   background-image: linear-gradient(to right, #878a8f, #878a8f 50%, #fff 50%);
 }
 

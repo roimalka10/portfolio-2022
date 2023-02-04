@@ -6,12 +6,10 @@
   align-items: center;
   padding: 30px 40px;
   z-index: 1000;
-  position: fixed;
   position: sticky;
   pointer-events: none;
   top: 0;
   left: 0px;
-  transition: 0.6s all;
   background: var(--white);
   border-bottom: 1px solid var(--blue);
 }
@@ -153,6 +151,7 @@
   pointer-events: all;
   z-index: 150;
   list-style: none;
+  cursor: auto;
 }
 
 .header .menu.active {
@@ -284,8 +283,13 @@
   background-image: url("../images/resume-image.jpg");
   filter: blur(3px);
 }
+
 .header .menu li:hover {
   color: var(--white);
+}
+
+#dark .header .menu li:hover {
+  color: var(--blueColor);
 }
 
 .header .menu li span {
@@ -312,8 +316,16 @@
   transition: all 0.35s cubic-bezier(0.694, 0.048, 0.335, 1);
 }
 
+#dark .header .menu li span::after {
+  background-color: var(--blueColor);
+}
+
 .header .menu li > a.active {
   color: var(--white);
+}
+
+#dark .header .menu li > a.active {
+  color: var(--blueColor);
 }
 
 .header .menu li > a.active span::after {

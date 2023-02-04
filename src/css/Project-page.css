@@ -62,7 +62,7 @@
   align-items: flex-end;
 }
 
-.dark .project-page .main-img {
+#dark .project-page .main-img {
   border-bottom: solid 1px var(--blue);
 }
 
@@ -74,7 +74,7 @@
   background: #000;
 }
 
-.dark .project-page #portfolio2021 .main-img {
+#dark .project-page #portfolio2021 .main-img {
   background: var(--white);
 }
 
@@ -249,7 +249,7 @@
   transition: all 0.4s ease-in-out;
 }
 
-.dark .another-project-btn-section .btn {
+#dark .another-project-btn-section .btn {
   background-image: linear-gradient(to right, #878a8f, #878a8f 50%, #fff 50%);
 }
 

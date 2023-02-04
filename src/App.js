@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, createContext, useContext } from "react";
 import "./css/main-styles.css";
 import "./css/UpButton.css";
 import ContactButton from "./components/ContactButton";
@@ -17,6 +17,9 @@ import { getSubPath, getRootPath } from "./utils";
 import ScrollToTopRoute from "./Reusables/ScrollToTopRoute";
 import TeslaPage from "./components/TeslaPage";
 import Cursor from "./components/CursorFeatures/Cursor";
+import { MouseContext } from "./context/MouseContext";
+
+export const ThemeContext = createContext(null);
 
 const App = () => {
   const location = useLocation();
@@ -41,9 +44,28 @@ const App = () => {
   appHeight();
   const projectRef = useRef(null);
 
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
+
+  const { cursorChangeHandler } = useContext(MouseContext);
+
   return (
-    <div className="App light">
+    <div className="App" id={theme}>
       <Cursor />
+      <div
+        className="theme-toggle"
+        onClick={toggleTheme}
+        checked={theme === "dark"}
+        onMouseEnter={() => cursorChangeHandler("hovered")}
+        onMouseLeave={() => cursorChangeHandler("")}
+      >
+        <div className="outer">
+          <div className="inner"></div>
+        </div>
+      </div>
       <ContactButton />
       <AnimatePresence mode="wait">
         <ScrollToTopRoute />

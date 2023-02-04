@@ -10,7 +10,7 @@
   --tesla: #e91b22;
 }
 
-.light {
+#light {
   --white: var(--whiteColor);
   --blue: var(--blueColor);
   --gray: var(--grayColor);
@@ -18,7 +18,7 @@
   background-color: var(--white);
 }
 
-.dark {
+#dark {
   --white: var(--blackColor);
   --blue: var(--whiteColor);
   --gray: var(--grayColor);
@@ -62,7 +62,7 @@ body {
   transform: translate(-50%, -50%);
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
-  will-change: width, height, transform, border, mix-blend-mode;
+  will-change: width, height, transform, border;
   z-index: 99999;
   pointer-events: none;
 }
@@ -88,6 +88,41 @@ body {
 .dot.hovered {
   background-color: #161e3061;
 }
+
+#dark .ring {
+  background-color: rgb(255 255 255 / 38%);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 40px;
+  right: 160px;
+  z-index: 9999;
+}
+
+.theme-toggle .outer {
+  border: 2px solid var(--blue);
+  border-radius: 30px;
+  width: 58px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.theme-toggle .outer .inner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--blue);
+  transition: 0.3s all;
+}
+
+#dark .theme-toggle .outer .inner {
+  transform: translateX(24px);
+}
+
 p,
 li {
   color: var(--blue);
@@ -221,7 +256,7 @@ nav.links a.btn {
   transition: all 0.4s ease-in-out;
 }
 
-.light nav.links a.btn {
+#light nav.links a.btn {
   background-image: linear-gradient(
     to right,
     #878a8f,
@@ -230,7 +265,7 @@ nav.links a.btn {
   );
 }
 
-.dark nav.links a.btn {
+#dark nav.links a.btn {
   background-image: linear-gradient(to right, #878a8f, #878a8f 50%, #fff 50%);
 }
 
@@ -256,7 +291,11 @@ section {
   margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
+  .theme-toggle {
+    top: 27px;
+    right: 80px;
+  }
 }
 
 @media (max-width: 620px) {
@@ -289,16 +328,10 @@ section {
   width: 0;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--gray);
+  background: var(--grayColor);
 }
 ::-webkit-scrollbar-track {
   background-color: #dcdcdc;
-}
-
-@media (max-width: 1400px) {
-}
-
-@media (max-width: 1280px) {
 }
 
 @media (max-width: 900px) {
