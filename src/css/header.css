@@ -4,7 +4,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 40px;
+  padding: 20px 40px;
   z-index: 1000;
   position: sticky;
   pointer-events: none;
@@ -330,12 +330,6 @@
 
 .header .menu li > a.active span::after {
   width: 100%;
-}
-
-@media (max-width: 1600px) {
-  .header {
-    padding: 20px 40px;
-  }
 }
 
 @media (max-width: 991px) {
