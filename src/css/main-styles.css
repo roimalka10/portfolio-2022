@@ -291,6 +291,19 @@ section {
   margin: 0 auto;
 }
 
+@media (max-width: 1180px) {
+  .ring,
+  .dot {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .theme-toggle {
     top: 27px;
@@ -332,10 +345,4 @@ section {
 }
 ::-webkit-scrollbar-track {
   background-color: #dcdcdc;
-}
-
-@media (max-width: 900px) {
-  ::-webkit-scrollbar {
-    display: none;
-  }
 }
