@@ -164,7 +164,7 @@ const TeslaPage = (props) => {
         </p>
       </motion.div>
       <div className="content-divider full-width" />
-      <OtherProjects exclude={Paths.TESLA} />;
+      <OtherProjects exclude={Paths.TESLA} />
     </section>
   );
 };

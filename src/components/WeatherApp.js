@@ -158,7 +158,7 @@ const WeatherApp = (props) => {
         </p>
       </motion.div>
       <div className="content-divider full-width" />
-      <OtherProjects exclude={Paths.WEATHER} />;
+      <OtherProjects exclude={Paths.WEATHER} />
     </section>
   );
 };

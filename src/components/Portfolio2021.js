@@ -157,7 +157,7 @@ const Portfolio2021 = (props) => {
         </p>
       </motion.div>
       <div className="content-divider full-width" />
-      <OtherProjects exclude={Paths.PORTFOLIO2021} />;
+      <OtherProjects exclude={Paths.PORTFOLIO2021} />
     </section>
   );
 };
