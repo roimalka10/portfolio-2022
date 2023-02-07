@@ -33,7 +33,7 @@ const Projects = forwardRef((props, ref) => {
                 className={`project project${index + 1}`}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ amount: 0.35 }}
+                viewport={{ amount: 0.1 }}
                 transition={{ duration: 0.8 }}
                 variants={{
                   visible: { opacity: 1, y: 0 },

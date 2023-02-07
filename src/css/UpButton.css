@@ -46,7 +46,6 @@ button.up-button:hover svg {
 @media (max-width: 767px) {
   button.up-button {
     box-shadow: none;
-    background: rgba(15, 20, 30, 1);
     border: none;
     opacity: 0.6;
     right: 20px;
