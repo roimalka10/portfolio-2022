@@ -200,13 +200,13 @@
   color: inherit;
   display: flex;
   align-items: center;
+  width: fit-content;
   gap: 10px;
   color: var(--blue);
 }
 
 .summery-text-container .titles > a span {
   border-bottom: 1px solid;
-  width: fit-content;
   line-height: 1.1;
 }
 
