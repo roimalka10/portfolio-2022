@@ -4,7 +4,7 @@ import "./css/UpButton.css";
 import ContactButton from "./components/ContactButton";
 import ScrollToTop from "react-scroll-to-top";
 import { ImArrowUp2 } from "react-icons/im";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import HomePage from "./components/HomePage";
 import ProjectsTemplate from "./containers/ProjectsTemplate";
 import ContentTemplate from "./containers/ContentTemplate";
@@ -20,6 +20,18 @@ import Cursor from "./components/CursorFeatures/Cursor";
 import { MouseContext } from "./context/MouseContext";
 
 export const ThemeContext = createContext(null);
+
+const animations = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
+  },
+};
 
 const App = () => {
   const location = useLocation();
@@ -55,17 +67,6 @@ const App = () => {
   return (
     <div className="App" id={theme}>
       <Cursor />
-      <div
-        className="theme-toggle"
-        onClick={toggleTheme}
-        checked={theme === "dark"}
-        onMouseEnter={() => cursorChangeHandler("hovered")}
-        onMouseLeave={() => cursorChangeHandler("")}
-      >
-        <div className="outer">
-          <div className="inner"></div>
-        </div>
-      </div>
       <ContactButton />
       <AnimatePresence mode="wait">
         <ScrollToTopRoute />
@@ -95,6 +96,25 @@ const App = () => {
             />
           </Route>
         </Routes>
+        <motion.div
+          variants={animations}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{
+            duration: 0.4,
+            delay: 2.3,
+          }}
+          className="theme-toggle"
+          onClick={toggleTheme}
+          checked={theme === "dark"}
+          onMouseEnter={() => cursorChangeHandler("hovered")}
+          onMouseLeave={() => cursorChangeHandler("")}
+        >
+          <div className="outer">
+            <div className="inner"></div>
+          </div>
+        </motion.div>
       </AnimatePresence>
       <ScrollToTop smooth className="up-button" component={<ImArrowUp2 />} />
     </div>

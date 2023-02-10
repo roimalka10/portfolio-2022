@@ -1,20 +1,13 @@
 import React from "react";
 import "../css/ContactButton.css";
-import { motion } from "framer-motion";
 
 const ContactButton = () => {
   return (
     <>
-      <motion.a
+      <a
         href="https://chatwith.io/s/roi-malka"
         target="_blank"
         className="contact-link"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.5,
-          delay: 1.5,
-        }}
       >
         <svg
           version="1.1"
@@ -34,7 +27,7 @@ const ContactButton = () => {
           ></path>
         </svg>
         <span>Contact me</span>
-      </motion.a>
+      </a>
     </>
   );
 };
