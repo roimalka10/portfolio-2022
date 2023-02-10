@@ -27,23 +27,10 @@ const Portfolio2021 = (props) => {
         transition={{
           duration: 1.2,
           delay: 0.8,
-          type: "spring",
-          bounce: 0.3,
         }}
-        ref={constraintsRef}
       >
         <div>
-          <motion.img
-            drag
-            dragTransition={{ bounceStiffness: 40, bounceDamping: 5 }}
-            dragMomentum={false}
-            dragElastic={0.5}
-            dragSnapToOrigin={true}
-            dragConstraints={constraintsRef}
-            src={portfolio2021Logo}
-            alt={imgAlt}
-          />
-          <span>Drag the image to have fun</span>
+          <img src={portfolio2021Logo} alt={imgAlt} />
         </div>
       </motion.div>
       <motion.div

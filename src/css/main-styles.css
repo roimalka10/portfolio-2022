@@ -7,7 +7,7 @@
   --blackColor: #01030e;
   --weather-bg: #7abaf1c2;
   --port2021: #161616;
-  --tesla: #e91b22;
+  --tesla: #5e47ff85;
 }
 
 #light {
@@ -15,6 +15,7 @@
   --blue: var(--blueColor);
   --gray: var(--grayColor);
   --loaderText: var(--grayColor);
+  --port: var(--port2021);
   background-color: var(--white);
 }
 
@@ -23,6 +24,7 @@
   --blue: var(--whiteColor);
   --gray: var(--grayColor);
   --loaderText: var(--blackColor);
+  --port: var(--whiteColor);
   background-color: var(--white);
 }
 
@@ -292,6 +294,9 @@ section {
 }
 
 @media (max-width: 1180px) {
+  .App {
+    cursor: auto;
+  }
   .ring,
   .dot {
     display: none;

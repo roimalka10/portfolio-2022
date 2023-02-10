@@ -20,7 +20,7 @@ export const projects = [
     about:
       "A weather app built to show state management using redux and Api usage displaying dynamic weather data.",
     link: "https://roi-malka-weather-app.netlify.app/",
-    page: "weather-app",
+    page: "/weather-app",
   },
   {
     id: 2,
@@ -56,7 +56,7 @@ export const projects = [
     about:
       "My personal portfolio created in 2021 to showcase my projects and skills.",
     link: "https://roimalkaportfolio-2021.netlify.app/",
-    page: "portfolio-2021",
+    page: "/portfolio-2021",
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ export const projects = [
     stack: "React / Styled Components",
     about: "A tesla home page clone showing Styled Components usage.",
     link: "https://tesla-clone-roimalka.netlify.app",
-    page: "tesla-clone",
+    page: "/tesla-clone",
   },
   {
     id: 6,

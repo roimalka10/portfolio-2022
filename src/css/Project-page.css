@@ -13,7 +13,7 @@
 }
 
 #portfolio2021 .progress-bar {
-  background: var(--port2021);
+  background: var(--port);
 }
 
 #tesla .progress-bar {
@@ -23,10 +23,6 @@
 .project-page .header {
   opacity: 1 !important;
 }
-
-/* .project-page > section {
-  margin-top: 98px;
-} */
 
 .container {
   width: 100%;
@@ -74,25 +70,16 @@
   background: #000;
 }
 
+.project-page #tesla .main-img {
+  background: var(--tesla);
+}
+
 #dark .project-page #portfolio2021 .main-img {
   background: var(--white);
 }
 
-#tesla .main-img::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgb(140 140 140 / 40%) 50%,
-    rgba(0, 0, 0, 0) 100%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  z-index: -1;
-  pointer-events: none;
+#dark .project-page #tesla .main-img {
+  background: var(--white);
 }
 
 .project-page .main-img > div {
@@ -102,67 +89,7 @@
 }
 
 .project-page #tesla .main-img > div {
-  height: 90%;
-}
-
-.project-page .main-img > div span {
-  position: absolute;
-  bottom: 20px;
-  right: -100px;
-  color: #fff;
-  width: auto;
-  padding: 0 15px;
-  height: 40px;
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  pointer-events: none;
-  font-size: 80%;
-  transition: 0.2s all;
-}
-
-#weather-app .main-img > div span {
-  background: #161e30c4;
-}
-
-#portfolio2021 .main-img > div span {
-  background: #302e2e;
-}
-
-#tesla .main-img > div span {
-  background: rgb(233 27 34 / 70%);
-}
-
-.project-page .main-img:hover > div span {
-  opacity: 0;
-}
-
-.project-page .main-img > div span::after {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 20px;
-  width: 0;
-  border-bottom: solid 8px transparent;
-  border-left: solid 8px transparent;
-  border-right: solid 8px transparent;
-}
-
-#weather-app .main-img > div span::after {
-  border-bottom: solid 8px #161e30c4;
-}
-
-#portfolio2021 .main-img > div span::after {
-  border-bottom: solid 8px #302e2e;
-}
-
-#tesla .main-img > div span::after {
-  border-bottom: solid 8px rgb(233 27 34 / 70%);
-}
-
-.project-page .main-img > div:hover span {
-  opacity: 1;
 }
 
 .project-page .main-img img {
