@@ -1,9 +1,10 @@
-import React, { useRef, forwardRef, useContext } from "react";
+import React, { forwardRef, useContext } from "react";
 import "../css/Projects.css";
 import { projects } from "../projects-data/projects-data";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { MouseContext } from ".././context/MouseContext";
+import { Link } from "react-router-dom";
 
 const Projects = forwardRef((props, ref) => {
   const { cursorChangeHandler } = useContext(MouseContext);
@@ -55,15 +56,15 @@ const Projects = forwardRef((props, ref) => {
                   <h2>{project.title}</h2>
                   <p>{project.about}</p>
                   <p className="stack">{project.stack}</p>
-                  <a
+                  <Link
                     onMouseEnter={() => cursorChangeHandler("hovered")}
                     onMouseLeave={() => cursorChangeHandler("")}
                     className="project-btn"
-                    href={project.page}
+                    to={project.page}
                   >
                     <span>Click To View Project Page</span>
                     <FaArrowRight size={14} className="icon-size" />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             ))}
