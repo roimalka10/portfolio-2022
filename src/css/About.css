@@ -1,5 +1,5 @@
 .about {
-  padding-top: 200px;
+  padding-top: 150px;
   height: 100%;
 }
 
@@ -268,10 +268,6 @@
 }
 
 @media (max-width: 1600px) and (min-width: 1024px) {
-  .about {
-    padding-top: 160px;
-  }
-
   .about-text h2 {
     font-size: 180%;
     max-width: 900px;

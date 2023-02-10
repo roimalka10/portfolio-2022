@@ -12,7 +12,7 @@
   left: 0px;
   background: var(--white);
   border-bottom: 1px solid var(--blue);
-  transition: opacity 0.4s, color 0.2;
+  transition: 0.4s opacity, 0.2s color;
 }
 
 .header .logo {
